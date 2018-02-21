@@ -14,23 +14,24 @@
 </head>
 <body>
     <div class="container-fluid speciesMap">
-        <div class="header"><h1>*species name*</h1></div>
+        <div class="header"><h1>{{*species name*}}</h1></div>
         <div class="col-md-2">
             <div class="row">
-              <img src="../images/PaintedBunting.png" alt="placeholder image">  
+              <img src="../images/PaintedBunting.png" alt="placeholder image" class="birdSelect">  
             </div>
             <div class="row">
                 <i class="fas fa-volume-up"></i>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-8">
             <!-- map goes here -->
             <div id="tooltip"></div><!-- lock in tooltip -->
             <svg width="960" height="600" id="statesvg"></svg> <!-- svg to hold the map. -->
         </div>
-        <div class="col-md-4">
+        <div class="col-md-2" id="speciesChart">
             <p>*Placeholder for top 10 locations*</p>
             <!-- graph goes here -->
+            <img src="../images/graphPH.png" alt="placeholder graph">
         </div>
     </div>
 

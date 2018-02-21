@@ -50,8 +50,8 @@ body {
     margin: 0 auto 1em auto;
 }
 
-/* Image Thumbnail Styling */
-img {
+/* Image Thumbnail Styling for Landing Page*/
+.landingPage img {
     border: 1px solid #ddd; 
     border-radius: 4px;
     padding: 5px;
@@ -117,7 +117,24 @@ img {
 .speciesMap .fa-volume-up {
     font-size: 100px;
     text-align: center;
+    margin-top: 20px;
     padding: 10px;
+}
+
+.speciesMap img {
+    max-width: 100%;
+    height: auto; 
+}
+
+.speciesMap .birdSelect {
+    padding-top: 40px;
+    padding-left: 20px;
+    border-radius: 5px;
+}
+
+.speciesMap #speciesChart {
+    padding-top: 40px;
+    padding-right: 20px;
 }
 
 /* Styling for regional page */
