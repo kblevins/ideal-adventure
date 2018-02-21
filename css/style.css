@@ -114,6 +114,10 @@ label {
 }
 
 /* Styling for species page */
+.speciesMap #leftSidebar, #speciesChart {
+    margin-top: 10%;
+}
+
 .speciesMap .fa-volume-up {
     font-size: 100px;
     text-align: center;
