@@ -11,6 +11,7 @@ body {
     text-align: center;
 }
 
+/* Header styling */
 .header h1 {
     padding: 80px !important;
     background-color: #640000;
@@ -19,6 +20,7 @@ body {
     color: #af9664;
     font-size: 80px !important;
 }
+/* Color Palette */
 /* 
     color: #191919;
     color: #191900;
@@ -40,17 +42,12 @@ body {
     color: #c81919;
     color: #c8af7d;
     color: #640000; */
+
 /* Input styling */
 .input-group {
     width: 400px;
     padding: 10px;
-    margin-top: 20px;
-    text-align: center;
-}
-
-input[type=text] {
-    margin: auto;
-    display: block;
+    margin: 0 auto 1em auto;
 }
 
 /* Image Thumbnail Styling */
