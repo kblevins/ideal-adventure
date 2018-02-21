@@ -138,6 +138,47 @@ body {
 }
 
 /* Styling for regional page */
+.regionMap {
+    text-align: center;
+}
+
+.regionMap img {
+    max-width: 100%;
+    height: auto; 
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.regionMap .gallery {
+    max-width: 150px;
+    border-radius: 5px;
+    float: left;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin: 10px;
+
+}
+
+.regionMap #birdImgs {
+    background-color: #af7d3286;
+}
+
+.regionMap .gallery:hover {
+    border: 1px solid #777;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    left: 50%;
+}
+
+.regionMap .desc {
+    padding-bottom: 5px;
+}
+.regionMap ul {
+    list-style: none;
+}
 
 /* Styling for distribution page */
 
