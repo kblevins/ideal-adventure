@@ -20,8 +20,8 @@
     </div>
 
     <div class="container-fluid landingPage">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
             <div class="tab">
                 <button class="tablinks" onclick="openSearch(event, 'speciesHotSpots')">Species Hot-spots</button>
                 <button class="tablinks" onclick="openSearch(event, 'regionalHotSpots')">Regional Hot-spots</button>
@@ -32,7 +32,9 @@
                 <div class="input-group" id="species">
                     <input type="text" class="form-control" placeholder="Search">
                     <span class="input-group-btn">
-                        <button class="btn btn-default" type="button"><i class="fas fa-search"></i></button>
+                        <a href="../html/species.html">
+                            <button class="btn btn-default" type="button"><i class="fas fa-search"></i></button>
+                        </a>
                     </span>
                 </div>
                 <img src="images/birdWatching.jpeg" alt="regions" class="img-thumbnail">
@@ -42,7 +44,9 @@
                 <div class="input-group" id="regional">
                     <input type="text" class="form-control" placeholder="Search">
                     <span class="input-group-btn">
-                        <button class="btn btn-default" type="button"><i class="fas fa-search"></i></button>
+                        <a href="../html/regional.html">
+                            <button class="btn btn-default" type="button"><i class="fas fa-search"></i></button>
+                        </a>
                     </span>
                 </div>
                 <img src="images/US_regions.png" alt="regions" class="img-thumbnail">
@@ -56,11 +60,11 @@
                     </span>
                 </div>
                 <img src="images/COYE_large.gif" alt="regions" class="img-thumbnail">
-                <label for="img">Common Yellowthroat | eBird</label>
+                <br><label for="img">Common Yellowthroat | eBird</label>
             </div>
             <p>Text about our dashboard, how it's used, what results will be returned</p>
         </div>
-        <div class="col-md-3"></div>
+        <div class="col-md-2"></div>
     </div>
     <script>
     function openSearch(evt, birdSearch) {
@@ -85,7 +89,7 @@
     }
 
     // To have one tab open by default
-    document.getElementById("defaultOpen").click();
+    document.getElementsByClassName('tablinks')[0].click()
     </script>
 </body>
 </html>
