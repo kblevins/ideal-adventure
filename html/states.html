@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>State-side Species</title>
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bellefair|Dosis" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+    <div class="header"><h2>{{state}}</h2></div>
+    <div class="container-fluid regionMap">
+        <div class="col-md-8">
+            <!-- map goes here -->
+            <img src="../images/regionalPH.png" alt="placeholder regional map" id="regionMap">
+        </div>
+        <div class="col-md-4" id="speciesChart">
+            <div class="row">
+                <img src="../images/graphPH.png" alt="placeholder chart" id="top5Chart">
+            </div>
+            <div class="row">
+                <h5>Top 5 Species in this State:</h5>
+                <ul>
+                    <li>{{bird1}}</li>
+                    <li>{{bird2}}</li>
+                    <li>{{bird3}}</li>
+                    <li>{{bird4}}</li>
+                    <li>{{bird5}}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" id="birdImgs">
+                <div class="gallery">
+                    <!-- Images for top 5 species in the region go here -->
+                    <a target="_blank" href="../images/PaintedBunting.png">
+                        <img src="../images/PaintedBunting.png" alt="placeholder image" class="img1">  
+                    </a>
+                    <div class="desc">{{bird1}}</div>
+                </div>
+                <div class="gallery">
+                    <a target="_blank" href="http://placekitten.com/300/350">
+                        <img src="http://placekitten.com/300/350" alt="placeholder img" class="img2"> 
+                    </a>
+                    <div class="desc">{{bird2}}</div>
+                </div>
+                <div class="gallery">
+                    <a target="_blank" href="https://www.placebear.com/200/300">
+                        <img src="https://www.placebear.com/200/300" alt="placeholder img" class="img3">  
+                    </a>
+                    <div class="desc">{{bird3}}</div>
+                </div>
+                <div class="gallery">
+                    <a target="_blank" href="">
+                        <img src="http://www.fillmurray.com/200/300" alt="placeholder img" class="img4">
+                    </a>
+                    <div class="desc">{{bird4}}</div>
+                </div>
+                <div class="gallery">
+                    <a target="_blank" href="http://www.placecage.com/c/200/300">
+                        <img src="http://www.placecage.com/c/200/300" alt="placeholder img" class="img5">  
+                    </a>
+                    <div class="desc">{{bird5}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Script for the new map will go here -->
+</body>
+</html>

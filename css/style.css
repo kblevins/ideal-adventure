@@ -1,0 +1,286 @@
+html,
+body, {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+    background-image: url("../images/upfeathers.png");
+    background-color: #af9696;
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+}
+
+/* Font Customization Here */
+label {
+    color: rgb(158, 158, 158);
+    font-size: 10px;
+}
+
+/* Header styling */
+.header h1, h2 {
+    padding: 80px !important;
+    background-color: #640000d5;
+    border-bottom: 3px solid #af7d32;
+    border-top: 3px solid #af7d32;
+    color: #af9664;
+    margin: 0;
+    font-family: 'Alex Brush', cursive;
+}
+
+/* Landing Page */
+.home {
+    background-image: url("../images/sunsetBirds.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+.header h1 {
+    font-size: 80px !important;
+}
+
+/* Input styling */
+.input-group {
+    width: 80%;
+    padding: 10px;
+    margin: 1em auto .5em auto;
+    color: #c8af7d !important;
+}
+
+.landingPage {
+    padding-top: 20px;
+}
+
+/* Image Thumbnail Styling*/
+.landingPage img {
+    border: 1px solid #ddd; 
+    border-radius: 4px;
+    padding: 5px;
+    width: 300px;
+    margin: auto;
+}
+
+.landingPage input {
+    border-radius: 10px !important;
+    border: 1px solid #640000;
+    background-color: #420101d7;
+    color: #c8af7d !important;
+}
+
+.landingPage .img-thumbnail {
+    border: 1px solid #640000;
+    padding: 0;
+}
+
+/* Button styling */
+.btn {
+    background-color: #c8af7d00;
+    color: #c8af7d;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #af7d32;
+    color: #640000;
+}
+
+/* Paragraph styling for our description */
+.home #intro {
+    color: #c8af7d;
+    background-color: #640000;
+    padding: 5px;
+}
+
+/* Search Tabs */
+/* Style the tab */
+.tab {
+    float: left;
+    /* border: 1px solid #c8af7d; */
+    background-color: #c8af7d;
+    width: 30%;
+    height: 300px;
+    border-radius: 3px;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    border-right: none;
+    border-radius: 3px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #e4c891;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+    background-color: #af7d32;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    /* border: 1px solid #c8af7d; */
+    width: 70%;
+    border-left: none;
+    height: 300px;
+    background-color: #6400009d;
+    border-radius: 3px;
+}
+
+.landingPage #stateHotSpots img {
+    max-width: 200px;
+}
+
+/* Styling for species page */
+.speciesMap #leftSidebar, #speciesChart {
+    margin-top: 10%;
+}
+
+.speciesMap .fa-volume-up {
+    font-size: 100px;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.speciesMap img {
+    max-width: 100%;
+    height: auto; 
+}
+
+.speciesMap .birdSelect {
+    padding-top: 40px;
+    padding-left: 20px;
+    border-radius: 5px;
+}
+
+.speciesMap #speciesChart {
+    padding-top: 40px;
+    padding-right: 20px;
+}
+
+/* Styling for regional page */
+.regionMap {
+    text-align: center;
+}
+
+.regionmap #speciesChart {
+    margin-top: 50%;
+}
+
+.regionMap img {
+    max-width: 100%;
+    height: auto; 
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.regionMap .gallery {
+    max-width: 150px;
+    border-radius: 5px;
+    float: left;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin: 10px;
+}
+
+.regionMap #birdImgs {
+    background-color: #af7d3286;
+    text-align: right;
+}
+
+.regionMap .gallery:hover {
+    border: 1px solid #777;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    left: 50%;
+}
+
+.regionMap .desc {
+    padding-bottom: 5px;
+}
+.regionMap ul {
+    list-style: none;
+}
+
+/* Styling for distribution page */
+.distrMap {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+}
+
+.distrMap .fa-play-circle {
+    font-size: 100px;
+    margin-top: 50%;
+    text-align: center;
+}
+
+/* Styling for map */
+.state{
+    fill: none;
+    stroke: #a9a9a9;
+    stroke-width: 1;
+}
+.state:hover{
+    fill-opacity:0.5;
+}
+#tooltip {   
+    position: absolute;           
+    text-align: center;
+    padding: 20px;             
+    margin: 10px;
+    font: 12px sans-serif;        
+    background: lightsteelblue;   
+    border: 1px;      
+    border-radius: 2px;           
+    pointer-events: none;         
+}
+#tooltip h4{
+    margin:0;
+    font-size:14px;
+}
+#tooltip{
+    background:rgba(0,0,0,0.9);
+    border:1px solid grey;
+    border-radius:5px;
+    font-size:12px;
+    width:auto;
+    padding:4px;
+    color:white;
+    opacity:0;
+}
+#tooltip table{
+    table-layout:fixed;
+}
+#tooltip tr td{
+    padding:0;
+    margin:0;
+}
+#tooltip tr td:nth-child(1){
+    width:50px;
+}
+#tooltip tr td:nth-child(2){
+    text-align:center;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Birding Oracle</title>
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bellefair|Dosis|Alex+Brush" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body class="home">
+    <div class="header" id="header">
+        <h1>Birding Oracle</h1>
+    </div>
+
+    <div class="container-fluid landingPage">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="tab">
+                <button class="tablinks" onclick="openSearch(event, 'speciesHotSpots')">Species Hot-spots</button>
+                <button class="tablinks" onclick="openSearch(event, 'stateHotSpots')">Hot-spots by State</button>
+                <button class="tablinks" onclick="openSearch(event, 'regionalHotSpots')">Hot-spots by Region</button>
+                <button class="tablinks" onclick="openSearch(event, 'speciesDistr')">Species Distribution Over Time</button>
+            </div>
+            
+            <div id="speciesHotSpots" class="tabcontent">
+                <div class="input-group" id="species">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <span class="input-group-btn">
+                        <a href="html/species.html">
+                            <button class="btn btn-default" type="button"><i class="fas fa-search"></i></button>
+                        </a>
+                    </span>
+                </div>
+                <img src="images/birdWatching.jpeg" alt="regions" class="img-thumbnail">
+            </div>
+
+            <div id="stateHotSpots" class="tabcontent">
+                <div class="input-group" id="states">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <span class="input-group-btn">
+                        <a href="html/states.html">
+                            <button class="btn btn-default" type="button"><i class="fas fa-search"></i></button>
+                        </a>
+                    </span>
+                </div>
+                <img src="images/texas.png" alt="states" class="img-thumbnail">
+            </div>
+            
+            <div id="regionalHotSpots" class="tabcontent">
+                <div class="input-group" id="regional">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <span class="input-group-btn">
+                        <a href="html/regional.html">
+                            <button class="btn btn-default" type="button"><i class="fas fa-search"></i></button>
+                        </a>
+                    </span>
+                </div>
+                <img src="images/US_regions.png" alt="regions" class="img-thumbnail">
+            </div>
+            
+            <div id="speciesDistr" class="tabcontent">
+                <div class="input-group" id="time">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <span class="input-group-btn">
+                        <a href="html/distr.html">
+                            <button class="btn btn-default" type="button"><i class="fas fa-search"></i></button>
+                        </a>
+                    </span>
+                </div>
+                <img src="images/COYE_large.gif" alt="regions" class="img-thumbnail">
+                <br><label for="img">Common Yellowthroat | eBird</label>
+            </div> 
+        </div>
+        <div class="col-md-2"></div>   
+    </div>
+    <div class="container-fluid">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div id="intro"><p>Text about our dashboard, how it's used, what results will be returned</p></div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+    <script>
+    function openSearch(evt, birdSearch) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the link that opened the tab
+    document.getElementById(birdSearch).style.display = "block";
+    evt.currentTarget.className += " active";
+    }
+
+    // To have one tab open by default
+    document.getElementsByClassName('tablinks')[0].click()
+    </script>
+</body>
+</html>
