@@ -18,6 +18,20 @@ label {
     font-size: 10px;
 }
 
+/* Home button on each page */
+.goHome {
+    font-size: 80px;
+    padding-top: 10px;
+}
+
+a {
+    color: #640000;
+}
+
+a:hover {
+    color: #af7d32;
+}
+
 /* Header styling */
 .header h1, h2 {
     padding: 80px !important;
@@ -88,10 +102,10 @@ label {
 }
 
 /* Paragraph styling for our description */
-.home #intro {
+#intro {
     color: #c8af7d;
     background-color: #640000;
-    padding: 5px;
+    padding: 10px;
 }
 
 /* Search Tabs */
@@ -148,8 +162,12 @@ label {
 }
 
 /* Styling for species page */
-.speciesMap #leftSidebar, #speciesChart {
-    margin-top: 10%;
+.speciesMap #leftSideBar {
+    margin-top: 25%;
+}
+
+.speciesMap #speciesChart  {
+    margin-top: 15%;
 }
 
 .speciesMap .fa-volume-up {
@@ -171,17 +189,63 @@ label {
 }
 
 .speciesMap #speciesChart {
-    padding-top: 40px;
     padding-right: 20px;
 }
+/* Styling for state page */
+
+/* .stateMap a {
+    padding-top: 50%;
+} */
+
+.stateMap .birdImgs {
+    background-color: #af7d3286;
+}
+.stateMap {
+    text-align: center;
+}
+
+.stateMap img {
+    max-width: 100%;
+    height: auto; 
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+
+}
+
+.stateMap .gallery {
+    max-width: 150px;
+    border-radius: 5px;
+    float: left;
+    text-align: center;
+    margin: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+.regionMap .gallery:hover {
+    border: 1px solid #777;
+}
+
+.stateMap .gallery img {
+    width: 100%;
+    height: auto;
+    left: 50%;
+}
+
+.stateMap .desc {
+    padding-bottom: 5px;
+}
+
+.stateMap ul {
+    list-style: none;
+}
+
+
 
 /* Styling for regional page */
 .regionMap {
     text-align: center;
-}
-
-.regionmap #speciesChart {
-    margin-top: 50%;
 }
 
 .regionMap img {
@@ -201,7 +265,7 @@ label {
     margin: 10px;
 }
 
-.regionMap #birdImgs {
+.regionMap .birdImgs {
     background-color: #af7d3286;
     text-align: right;
 }
@@ -219,6 +283,7 @@ label {
 .regionMap .desc {
     padding-bottom: 5px;
 }
+
 .regionMap ul {
     list-style: none;
 }
