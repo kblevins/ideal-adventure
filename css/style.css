@@ -143,6 +143,10 @@ label {
     border-radius: 3px;
 }
 
+.landingPage #stateHotSpots img {
+    max-width: 200px;
+}
+
 /* Styling for species page */
 .speciesMap #leftSidebar, #speciesChart {
     margin-top: 10%;

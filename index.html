@@ -24,7 +24,8 @@
         <div class="col-md-8">
             <div class="tab">
                 <button class="tablinks" onclick="openSearch(event, 'speciesHotSpots')">Species Hot-spots</button>
-                <button class="tablinks" onclick="openSearch(event, 'regionalHotSpots')">Regional Hot-spots</button>
+                <button class="tablinks" onclick="openSearch(event, 'stateHotSpots')">Hot-spots by State</button>
+                <button class="tablinks" onclick="openSearch(event, 'regionalHotSpots')">Hot-spots by Region</button>
                 <button class="tablinks" onclick="openSearch(event, 'speciesDistr')">Species Distribution Over Time</button>
             </div>
             
@@ -38,6 +39,18 @@
                     </span>
                 </div>
                 <img src="images/birdWatching.jpeg" alt="regions" class="img-thumbnail">
+            </div>
+
+            <div id="stateHotSpots" class="tabcontent">
+                <div class="input-group" id="states">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <span class="input-group-btn">
+                        <a href="html/states.html">
+                            <button class="btn btn-default" type="button"><i class="fas fa-search"></i></button>
+                        </a>
+                    </span>
+                </div>
+                <img src="images/texas.png" alt="states" class="img-thumbnail">
             </div>
             
             <div id="regionalHotSpots" class="tabcontent">
