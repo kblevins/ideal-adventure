@@ -6,7 +6,7 @@ body, {
 }
 
 body {
-    background-image: url("../images/upfeathers.png");
+    background-image: url("https://lh3.googleusercontent.com/4XfWrXjO-8nnPqHrSXGCN7WRkRhVNXBxU38qczh_TxT8yxG1DoSSi8O_fIOd9pTogi9WZf_5XRnX7NGhf3Uw3nbhjFjfCJGsLmfc1A6PZOI_V8TR4xeT6mfZ_h1RkJIdbOJXB5zYcA=s208-p-k");
     background-color: #af9696;
     text-align: center;
     font-family: 'Dosis', sans-serif;
@@ -45,7 +45,7 @@ a:hover {
 
 /* Landing Page */
 .home {
-    background-image: url("../images/sunsetBirds.jpeg");
+    background-image: url("https://lh3.googleusercontent.com/4x3nRLyocIX1pVx-oj6xWluNSJy4my-Cj9P0WgZS6aolGryKhLs6ZoqqTwjRgF9rltDShoEGETc2Nm2cf4xjTiE5w9MHhWW6gjKcl4XUisFxWTz2Dcd0khInOxYX_xcQ4wMSP-xlmQ");
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
