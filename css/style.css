@@ -214,7 +214,7 @@ select i {
     margin-top: 15%;
 }
 
-.speciesMap .fa-volume-up {
+.fa-volume-up, fa-home {
     font-size: 100px;
     text-align: center;
     margin-top: 20px;
@@ -285,8 +285,6 @@ select i {
     list-style: none;
 }
 
-
-
 /* Styling for regional page */
 .regionMap {
     text-align: center;
@@ -295,39 +293,45 @@ select i {
 .regionMap img {
     max-width: 100%;
     height: auto; 
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
+    /* padding: 10px; */
 }
 
-.regionMap .gallery {
-    max-width: 150px;
-    border-radius: 5px;
-    float: left;
-    text-align: center;
-    border: 1px solid #ccc;
-    margin: 10px;
+/* Image captions */
+.regionMap .caption {
+    padding-bottom: 10px;
 }
 
-.regionMap .birdImgs {
+/* Home button */
+.regionMap .goHome {
+    margin-top: 40%;
+}
+
+/* Regional Page Footer */
+#STUPID {
     background-color: #af7d3286;
-    text-align: right;
 }
 
-.regionMap .gallery:hover {
-    border: 1px solid #777;
+/* Top 5 bird images */
+#STUPID img {
+    max-width: 150px;
+    border: none !important;
+    filter: sepia(100%);
 }
 
-.gallery img {
-    width: 100%;
-    height: auto;
-    left: 50%;
+#STUPID img:hover {
+    filter: none;
 }
 
-.regionMap .desc {
-    padding-bottom: 5px;
+#STUPID .fa-home {
+    margin-top: 40%;
+    padding: none !important;
 }
 
+#STUPID .caption {
+    padding: 5px;
+
+}
+/* Top 5 birds in region list */
 .regionMap ul {
     list-style: none;
 }
