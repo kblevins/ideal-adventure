@@ -12,12 +12,6 @@ body {
     font-family: 'Dosis', sans-serif;
 }
 
-/* Font Customization Here */
-label {
-    color: rgb(158, 158, 158);
-    font-size: 10px;
-}
-
 /* Home button on each page */
 .goHome {
     font-size: 80px;
@@ -35,15 +29,12 @@ a:hover {
 /* Header styling */
 .header h1, h2 {
     padding: 80px !important;
-    background-color: #640000d5;
+    background-color: #640000d5 !important;
     border-bottom: 3px solid #af7d32;
     border-top: 3px solid #af7d32;
     color: #af9664;
     margin: 0;
-    font-family: 'Alex Brush', cursive;
-    font-family: 'Astloch', cursive;
     font-family: 'Almendra Display', cursive !important;
-    /* font-weight: 500; */
 }
 
 /* Landing Page */
@@ -151,6 +142,11 @@ a:hover {
     width: 70%;
     height: 320px;
     background-color: #6400009d;
+}
+
+.tabcontent .label {
+    font-size: 12px;
+    color: #c8af7d;
 }
 
 .tabcontent #searchEx, img {
@@ -306,9 +302,10 @@ select i {
     margin-top: 40%;
 }
 
-/* Regional Page Footer */
+/* Regional & State Page Footers */
 #STUPID {
     background-color: #af7d3286;
+    border-top: 3px solid #af7d32;
 }
 
 /* Top 5 bird images */
@@ -331,6 +328,8 @@ select i {
     padding: 5px;
 
 }
+/* END REGIONAL & STATE FOOTERS */
+
 /* Top 5 birds in region list */
 .regionMap ul {
     list-style: none;
