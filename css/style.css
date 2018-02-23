@@ -45,7 +45,7 @@ a:hover {
 
 /* Landing Page */
 .home {
-    background-image: url("https://lh3.googleusercontent.com/4x3nRLyocIX1pVx-oj6xWluNSJy4my-Cj9P0WgZS6aolGryKhLs6ZoqqTwjRgF9rltDShoEGETc2Nm2cf4xjTiE5w9MHhWW6gjKcl4XUisFxWTz2Dcd0khInOxYX_xcQ4wMSP-xlmQ");
+    background-image: url("../images/sunsetBirds.jpeg");
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -109,14 +109,11 @@ a:hover {
 }
 
 /* Search Tabs */
-/* Style the tab */
 .tab {
     float: left;
-    /* border: 1px solid #c8af7d; */
     background-color: #c8af7d;
     width: 30%;
-    height: 300px;
-    border-radius: 3px;
+    height: 320px;
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -132,7 +129,6 @@ a:hover {
     cursor: pointer;
     transition: 0.3s;
     border-right: none;
-    border-radius: 3px;
 }
 
 /* Change background color of buttons on hover */
@@ -149,17 +145,36 @@ a:hover {
 .tabcontent {
     float: left;
     padding: 0px 12px;
-    /* border: 1px solid #c8af7d; */
     width: 70%;
-    border-left: none;
-    height: 300px;
+    height: 320px;
     background-color: #6400009d;
-    border-radius: 3px;
+}
+
+.tabcontent #searchEx, img {
+    margin-top: 5%;
+    color: #c8af7d;
+}
+
+.tabcontent #searchEx {
+    text-align: left !important;
+}
+
+#states img {
+    max-width: 50px !important;
+}
+
+.tabcontent a {
+    color: #c8af7d !important;
+    text-decoration: underline;
 }
 
 .landingPage #stateHotSpots img {
     max-width: 200px;
 }
+
+/* select {
+    position: absolute;
+} */
 
 /* Styling for species page */
 .speciesMap #leftSideBar {
