@@ -38,7 +38,14 @@
                         </a>
                     </span>
                 </div>
-                <img src="https://lh3.googleusercontent.com/3jHYinmjBtqYetiGnS5i4bPQCBQcef6G-iK8DhSPgccgz7Wv_gY53B13c0JCLlfXyE3dAUZc0ekW8JBG1XM42sGBHs8PjaMwFY8yGcnsHGAi7cjBGEd-p_7t02ymgS-sGSulX13ucw" alt="species" class="img-thumbnail">
+                <div class="col-md-6">
+                    <img src="https://lh3.googleusercontent.com/3jHYinmjBtqYetiGnS5i4bPQCBQcef6G-iK8DhSPgccgz7Wv_gY53B13c0JCLlfXyE3dAUZc0ekW8JBG1XM42sGBHs8PjaMwFY8yGcnsHGAi7cjBGEd-p_7t02ymgS-sGSulX13ucw" alt="species" class="img-thumbnail">
+                </div>
+                <div class="col-md-6" id="searchEx">
+                    <p>Choose a species code from <a target="_blank" href="">this</a> table and search for overall hot-spots</p>
+                
+                    <p>Example: chotin1 will return a map of hot-spots for a Choco Tinamou</p>
+                </div>    
             </div>
 
             <div id="stateHotSpots" class="tabcontent">
@@ -50,7 +57,25 @@
                         </a>
                     </span>
                 </div>
-                <img src="https://lh3.googleusercontent.com/2yWI1q3cRgh03sW90qbefQ1qbmS956EeAauIME9bsuQ7FK0SatRgWYS-9rGgqZROe1u876uqNd0blKBSEFk3Gkwd9-CnmT6opexdxz3OudksCjNmHks5G7VDQyKIqNnwZAD4t5XOmw" alt="states" class="img-thumbnail">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div id="selectNumber">
+                            <form id="myForm">
+                                <select name="selectState" id="selectState">
+                                    <option>Select a State</option>
+                                </select>
+                            </form>
+                        </div>
+                    </div> 
+                    <div class="row">
+                        <img src="https://lh3.googleusercontent.com/2yWI1q3cRgh03sW90qbefQ1qbmS956EeAauIME9bsuQ7FK0SatRgWYS-9rGgqZROe1u876uqNd0blKBSEFk3Gkwd9-CnmT6opexdxz3OudksCjNmHks5G7VDQyKIqNnwZAD4t5XOmw" alt="states" class="img-thumbnail">
+                    </div>  
+                </div>   
+                <div class="col-md-6" id="searchEx">
+                    <p>Select only a state to return the top 5 species hot-spots and top 10 hot-spot locations for that state</p>
+                
+                    <p>Select a state and <a target="_blank" href="">species</a> to search for specific species' hot-spots and locational hot-spots within that state</p>
+                </div>   
             </div>
             
             <div id="regionalHotSpots" class="tabcontent">
@@ -62,7 +87,29 @@
                         </a>
                     </span>
                 </div>
-                <img src="https://lh3.googleusercontent.com/jOpok9KvcxNBhwteeHzlk8bp83sVZxfBijhkYhtBilMwWgFkLbP0uvNCPXx7d3C9D2OVZVqtfPx3-WdyRfxvgigzTwdZIEu5OEe8TpMXjb5RxrYMVbm2qa2nCMhW-HYW6HSps7vrIg" alt="regions" class="img-thumbnail">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div id="selectNumber">
+                            <form id="myForm">
+                                <select name="selectRegion" id="selectRegion">
+                                    <option>Select a Region</option>
+                                </select>
+                            </form>
+                        </div>
+                    </div> 
+                    <div class="row">
+                        <a target="_blank"href="https://lh3.googleusercontent.com/kRuMIRdbj1NFaIzUFtn9Lyc_PPzoTPxvm-mf4Rka4NQmWs5rg2oHyITat2bp8l7g2LjdxDnAqfxXjxhMR_P7rc5G8K29DUW-YwyEgFtfECQOQ_X0FOtOLVGr11r1HJbWSmbiksDKTA">
+                            <img src="https://lh3.googleusercontent.com/jylH5vdtTRBAYvPgECKlYv4atO1BaQrJAm8xlAw851uNWjDFV7J3CP5i5Y65Ye1rv4Won42MOCdzGuKm96iR4vCvxJnV8vxE9YrYIwEArtBqd7ZKQXVbq_oZ3ExQwPfRR_VlMQAWuQ" alt="regions" class="img-thumbnail">
+                        </a>
+                    </div>
+                </div>  
+                <div class="col-md-6" id="searchEx">
+                    <p>Select only a region to search for the top 5 species hot-spots and top 10 location hot-spots within that region</p>
+                
+                    <p>Select a region and species to search for specific species' hot-spots and locational hot-spots within that region</p>
+                   
+                    <p>Click the map to see a regional breakdown</p>
+                </div>
             </div>
             
             <div id="speciesDistr" class="tabcontent">
@@ -74,8 +121,13 @@
                         </a>
                     </span>
                 </div>
-                <img src="https://lh3.googleusercontent.com/gtTL-gw0auQ5GqJFsdmvaoBA_lpebABFY8eWDgQIEmzSiWyTbludVF5V0YVsBK4vlodfCwQK0lKZZPhqJnQK6X3Y1uehByI_S-_hDNCw-7Q3JLmv1hYIDw93ar8FEQMFPjZTx553xw" alt="regions" class="img-thumbnail">
-                <br><label for="img">Common Yellowthroat | eBird</label>
+                <div class="col-md-6">
+                    <img src="https://lh3.googleusercontent.com/gtTL-gw0auQ5GqJFsdmvaoBA_lpebABFY8eWDgQIEmzSiWyTbludVF5V0YVsBK4vlodfCwQK0lKZZPhqJnQK6X3Y1uehByI_S-_hDNCw-7Q3JLmv1hYIDw93ar8FEQMFPjZTx553xw" alt="regions" class="img-thumbnail">
+                    <br><label for="img">Common Yellowthroat | eBird</label>
+                </div>
+                <div class="col-md-6" id="searchEx">
+                    <p>Enter a date or range of dates to search for species distribution over time</p>
+                </div>
             </div> 
         </div>
         <div class="col-md-2"></div>   
@@ -111,6 +163,46 @@
 
     // To have one tab open by default
     document.getElementsByClassName('tablinks')[0].click()
+
+    // Adding a dropdown to search for species by state
+    var selectState = document.getElementById("selectState");
+
+    var states = 	/* states to populate the dropdown */	
+        ["HI", "AK", "FL", "SC", "GA", "AL", "NC", "TN", "RI", "CT", "MA",
+        "ME", "NH", "VT", "NY", "NJ", "PA", "DE", "MD", "WV", "KY", "OH", 
+        "MI", "WY", "MT", "ID", "WA", "DC", "TX", "CA", "AZ", "NV", "UT", 
+        "CO", "NM", "OR", "ND", "SD", "NE", "IA", "MS", "IN", "IL", "MN", 
+        "WI", "MO", "AR", "OK", "KS", "LA", "VA"]
+    states.sort(); /* placing the states in alphabetical order */
+
+    // loop through the array to populate the dropdown list
+    for(var i = 0; i < states.length; i++) {
+        var optS = states[i];
+        var elS = document.createElement("option");
+        elS.textContent = optS;
+        elS.value = optS;
+        selectState.appendChild(elS);
+    }
+
+    // Creating a dropdown for regional search
+    var selectRegion = document.getElementById("selectRegion");
+
+    var regions = /* regions to populate the dropdown */
+        ["Pacific Northwest", "Pacific Southwest/Great Basin", "Northern Plains",
+        "Southern Rockies/Colorado Plateau", "Central Plains", "Southern Plains",
+        "Great Lakes", "Prairie Peninsula", "Ozarks", "Northeast", "Mid-Atlantic/Appalachians",
+        "Southeast"]
+    regions.sort(); /* placing the regions in alphabetical order */
+    
+    // loop through regions array to populate the dropdown list
+    for(var i = 0; i < regions.length; i++) {
+        var optR = regions[i];
+        var elR = document.createElement("option");
+        elR.textContent = optR;
+        elR.value = optR;
+        selectRegion.appendChild(elR);
+    }
+    
     </script>
 </body>
 </html>
