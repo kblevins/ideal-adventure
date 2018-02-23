@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+	.state{
+		fill: none;
+		stroke: #a9a9a9;
+		stroke-width: 1;
+	}
+	.state:hover{
+		fill-opacity:0.5;
+	}
+	#tooltip {   
+		position: absolute;           
+		text-align: center;
+		padding: 20px;             
+		margin: 10px;
+		font: 12px sans-serif;        
+		background: lightsteelblue;   
+		border: 1px;      
+		border-radius: 2px;           
+		pointer-events: none;         
+	}
+	#tooltip h4{
+		margin:0;
+		font-size:14px;
+	}
+	#tooltip{
+		background:rgba(0,0,0,0.9);
+		border:1px solid grey;
+		border-radius:5px;
+		font-size:12px;
+		width:auto;
+		padding:4px;
+		color:white;
+		opacity:0;
+	}
+	#tooltip table{
+		table-layout:fixed;
+	}
+	#tooltip tr td{
+		padding:0;
+		margin:0;
+	}
+	#tooltip tr td:nth-child(1){
+		width:50px;
+	}
+	#tooltip tr td:nth-child(2){
+		text-align:center;
+	}
+</style>
+<body>
+<div id="tooltip"></div><!-- lock in tooltip -->
+<svg width="960" height="600" id="statesvg"></svg> <!-- svg to hold the map. -->
+<script src="uStates.js"></script> <!-- creates uStates. -->
+<script src="states.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+
+	function tooltipHtml(d){	/* function to create html content string in tooltip div. */
+		return "<h4>"+d.region2+"</h4>";
+	}
+	
+	//var color_list = ['#f2f0f7','#dadaeb','#bcbddc','#9e9ac8','#807dba','#6a51a3','#4a1486']
+	var color_list = ['#7f3b08','#b35806','#e08214','#fdb863','#fee0b6','#f7f7f7','#d8daeb','#b2abd2','#8073ac','#542788','#2d004b']
+
+	var sampleData = regions;
+
+	var regionKeys = Object.keys(regions);
+
+	for (i=0; i< regionKeys.length; i++){
+		var state = regionKeys[i]
+		var reg = Object.values(regions[state])[1]
+
+		if (reg == "Northeast"){
+			regions[state]["color"] = color_list[1]
+		} else if (reg == "Mid-Atlantic/Appalachians"){
+			regions[state]["color"] = color_list[0]
+		} else if (reg == "Southeast"){
+			regions[state]["color"] = color_list[2]
+		} else if (reg == "Prairie Peninsula"){
+			regions[state]["color"] = color_list[3]
+		} else if (reg == "Northern Plains"){
+			regions[state]["color"] = color_list[4]
+		} else if (reg == "Ozarks"){
+			regions[state]["color"] = color_list[6]
+		} else if (reg == "Central Plains"){
+			regions[state]["color"] = color_list[7]
+		} else if (reg == "Southern Plains"){
+			regions[state]["color"] = color_list[8]
+		} else if (reg == "Pacific Northwest"){
+			regions[state]["color"] = color_list[9]
+        } else if (reg == "Pacific Southwest/Great Basin"){
+			regions[state]["color"] = color_list[10]
+        } else if (reg == "Southern Rockies/Colorado Plateau"){
+			regions[state]["color"] = color_list[5]
+		} else if (reg == "Great Lakes"){
+			regions[state]["color"] = color_list[10]
+		} else if (reg == "Alaska"){
+			regions[state]["color"] = color_list[1]
+		} else if (reg == "Hawaii"){
+			regions[state]["color"] = color_list[10]
+        }        
+	}
+
+	
+	/* draw states on id #statesvg */	
+	uStates.draw("#statesvg", sampleData, tooltipHtml);
+	
+	d3.select(self.frameElement).style("height", "600px"); 
+</script>
+
+</body>
