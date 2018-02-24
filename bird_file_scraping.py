@@ -29,10 +29,10 @@ def img_audio(bird):
     li = ul.find_all("li")[0]
 
     # store address to first image
-    img = target.find_all("img")[0]['src']
+    img = li.find_all("img")[0]['src']
 
     # store address to audio file
-    audio = target.find_all("audio")[0]['src']
+    audio = li.find_all("audio")[0]['src']
     
     # return list of the image & audio files
     return [img, audio]
