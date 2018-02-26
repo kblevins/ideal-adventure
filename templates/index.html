@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="../static/css/style.css">
 </head>
 <body class="home">
-    <div class="header" id="header">
+    <div class="headerHome" id="header">
         <h1>Birding Oracle</h1>
     </div>
 
@@ -113,20 +113,31 @@
             </div>
             
             <div id="speciesDistr" class="tabcontent">
-                <div class="input-group" id="time">
-                    <input type="text" class="form-control" placeholder="Search">
-                    <span class="input-group-btn">
-                        <a href="../html/distr.html">
-                            <button class="btn btn-default" type="button"><i class="fas fa-search"></i></button>
-                        </a>
-                    </span>
+                    <div class="input-group" id="time">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+                            <a href="../html/distr.html">
+                                <button class="btn btn-default" type="button"><i class="fas fa-search"></i></button>
+                            </a>
+                        </span>
+                    </div>
+                <div class="col-md-6">
+                    <div class="col-md-6 startDate"><form>Start: <input type="date" name="startDate"></form></div>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-6">
+                    <div class="col-md-6 endDate"><form>End: <input type="date" name="startDate"></form></div>
+                </div>    
+                <div class="col-md-7">
                     <img src="https://lh3.googleusercontent.com/gtTL-gw0auQ5GqJFsdmvaoBA_lpebABFY8eWDgQIEmzSiWyTbludVF5V0YVsBK4vlodfCwQK0lKZZPhqJnQK6X3Y1uehByI_S-_hDNCw-7Q3JLmv1hYIDw93ar8FEQMFPjZTx553xw" alt="regions" class="img-thumbnail">
                     <br><p class="label">Common Yellowthroat | eBird</p>
                 </div>
-                <div class="col-md-4" id="searchEx">
-                    <p>Enter a date or range of dates to search for species distribution over time</p>
+                <div class="col-md-5" id="searchEx">
+                    <!-- <div class="row">
+                        
+                    </div> -->
+                    <div class="row">
+                        <p>Enter a date or range of dates to search for species distribution over time</p>
+                    </div>
                 </div>
             </div> 
         </div>
