@@ -14,20 +14,31 @@ body {
 
 /* Home button on each page */
 .goHome {
-    font-size: 80px;
-    padding-top: 10px;
+    font-size: 50px;
+    text-align: center;
+    
 }
+
+.goHome a {
+    color: #af7d32;
+}
+
+.goHome a:hover {
+    color: #976211;
+}
+
+/* other hyperlinks */
 
 a {
     color: #640000;
 }
 
 a:hover {
-    color: #af7d32;
+    color: #976211;
 }
 
 /* Header styling */
-.header h1, h2 {
+.headerHome {
     padding: 80px !important;
     background-color: #640000d5 !important;
     border-bottom: 3px solid #af7d32;
@@ -35,7 +46,46 @@ a:hover {
     color: #af9664;
     margin: 0;
     font-family: 'Almendra Display', cursive !important;
+    font-size: 30px !important;
 }
+
+.headerHome h1 {
+    font-size: 80px !important;
+}
+
+.header {
+    padding: 50px !important;
+    background-color: #640000d5 !important;
+    border-bottom: 3px solid #af7d32;
+    border-top: 3px solid #af7d32;
+    color: #af9664;
+    margin: 0;
+    font-family: 'Almendra Display', cursive !important;
+}
+
+.header h1 {
+    font-size: 80px !important;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #af7d3286;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #af7d32;
+    text-align: left;
+    border-bottom: 3px solid #af7d32;
+    border-top: 3px solid #af7d32;
+    font-family: 'Almendra Display', cursive !important;
+}
+
+.footer p {
+    margin-top: 8px;
+    margin-left: 5px;
+}
+
 
 /* Landing Page */
 .home {
@@ -46,9 +96,6 @@ a:hover {
     background-size: 100%;
 }
 
-.header h1 {
-    font-size: 80px !important;
-}
 
 /* Input styling */
 .input-group {
@@ -57,6 +104,22 @@ a:hover {
     margin: 1em auto .5em auto;
     color: #c8af7d !important;
 }
+
+.startDate, .endDate {
+    width: 100%;
+    padding-bottom: 10px;
+    margin-top: -5px !important;
+    color: #c8af7d; 
+}
+
+.startDate {
+    text-align: right;
+}
+
+.endDate {
+    text-align: left;
+}
+
 
 .landingPage {
     padding-top: 20px;
@@ -251,26 +314,6 @@ select i {
     border-radius: 5px;
     text-align: center;
 
-}
-
-.stateMap .gallery {
-    max-width: 150px;
-    border-radius: 5px;
-    float: left;
-    text-align: center;
-    margin: 10px;
-    display: block;
-    margin: 0 auto;
-}
-
-.regionMap .gallery:hover {
-    border: 1px solid #777;
-}
-
-.stateMap .gallery img {
-    width: 100%;
-    height: auto;
-    left: 50%;
 }
 
 .stateMap .desc {
