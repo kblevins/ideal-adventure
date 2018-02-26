@@ -7,7 +7,7 @@ body, {
 
 body {
     background-image: url("https://lh3.googleusercontent.com/4XfWrXjO-8nnPqHrSXGCN7WRkRhVNXBxU38qczh_TxT8yxG1DoSSi8O_fIOd9pTogi9WZf_5XRnX7NGhf3Uw3nbhjFjfCJGsLmfc1A6PZOI_V8TR4xeT6mfZ_h1RkJIdbOJXB5zYcA=s208-p-k");
-    background-color: #af9696;
+    background-color: #640000;
     text-align: center;
     font-family: 'Dosis', sans-serif;
 }
@@ -16,7 +16,6 @@ body {
 .goHome {
     font-size: 50px;
     text-align: center;
-    
 }
 
 .goHome a {
@@ -93,7 +92,7 @@ a:hover {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    background-size: 100%;
+    background-size: auto 1200px;
 }
 
 
