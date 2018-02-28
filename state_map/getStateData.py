@@ -59,22 +59,24 @@ def getTop10(df):
 
     # Part 3 - Get top 5 species at each location
     # subset original df for the top 10 locations
-def getTop5(df):
-    top_ten_sp = df.loc[df['locName'].isin(top_ten['locName'])]
-    # subset for relevant columns
-    top_ten_sp = top_ten_sp.loc[:,['comName', 'howMany', 'locName']]
-    # group by location & species to sum the total # of each species 
+def getBirds(df):
+    sp = df.loc[:,['comName', 'howMany', 'locName']]
+    # group species to sum the total # of each species 
     # has been recorded at that location
-    top_ten_sp = pd.DataFrame(top_ten_sp.groupby(['comName', 'locName'])['howMany'].sum())
+    sp = pd.DataFrame(sp.groupby(['comName'])['howMany'].sum())
     # reset index
-    top_ten_sp = top_ten_sp.reset_index()
+    sp = sp.reset_index()
     # sort by location name & howMany
-    top_ten_sp = top_ten_sp.sort_values(by = ['locName', 'howMany'], ascending = False)
-    # group by location
-    top_ten_gr = top_ten_sp.groupby('locName')
+    sp = sp.sort_values(by = ['howMany'], ascending = False)
+    # filter for species level identifications
+    spFilter = sp.comName.str.contains('sp\\.')
+    spFilter = spFilter[spFilter == False]
+    spLevel = sp.filter(items = spFilter.index, axis=0)
     # subset for top 5 species at each location
-    top_ten_gr = top_ten_gr.head(5)
+    topsp = spLevel.head(5)
     # convert to json
-    top10_sp_j = top_ten_gr.to_json(orient='records', force_ascii=False)
+    topsp_j = topsp.to_json(orient='records', force_ascii=False)
+    topsp_j = topsp_j.replace("\\","")
+    topsp_j
 
-    return(top10_sp_j)
+    return(topsp_j)

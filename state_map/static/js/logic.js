@@ -17,7 +17,7 @@ function stateMap(ST){
   Plotly.d3.json(url, function(error, data){
     if (error) return console.warn(error);
 
-    document.getElementById('stateMap').innerHTML = "<div id='map' style='width: 600px; height: 500px;'></div>";
+    document.getElementById('stateMap').innerHTML = "<div id='map' style='width: 500px; height: 450px;'></div>";
     var osmUrl = "https://api.mapbox.com/styles/v1/kkblevins/cje0f0el638792rmw5y3yw648/tiles/256/{z}/{x}/{y}?"+
     "access_token=pk.eyJ1Ijoia2tibGV2aW5zIiwiYSI6ImNqZGhqeWlxaDBiZ2kydnNhYTlseDE3eTYifQ.EWlCoyNVcod37iJ0nUdG3w"
     osmLayer = new L.TileLayer(osmUrl);

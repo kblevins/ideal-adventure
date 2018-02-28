@@ -31,9 +31,8 @@ stateMap("AL");
 // initializing chart
 siteChart("AL");
 
-// initialize bird list
-
 // initialize bird photos
+birdPhotos("AL");
 
 // what to do when the state is changed
 function optionChanged(ST){
@@ -41,6 +40,7 @@ function optionChanged(ST){
   stateName(ST);
   stateMap(ST);
   siteChart(ST);
+  birdPhotos(ST);
   }
 
 
@@ -74,3 +74,40 @@ function siteChart(ST){
   Plotly.newPlot('sitesChart', data, layout);
 }
 )}
+
+function birdPhotos(ST){
+  url = 'birdData/'+ST;
+  Plotly.d3.json(url, function(error, birdData){
+    if (error) return console.warn(error);
+  var names = birdData.map(record => record.comName);
+  var images = birdData.map(record => record.img);
+  var links = birdData.map(record => record.link);
+  
+  console.log(names);
+  console.log(images);
+  console.log(links);
+
+  for(i=0; i<5; i++){
+  document.getElementById('bird'+(i+1)).innerHTML = "<div id=bird"+(i+1)+"style='width: 100px; height: 100px;'></div>";
+  var feature = document.getElementById('bird'+(i+1))
+    if(links[i] !== "no link"){
+      feature.href = links[i];
+    }
+    
+    var birdImg = document.createElement("img");
+    if(images[i] === "no img"){
+      birdImg.src = "../static/images/solid bird.png"
+    } else {
+      birdImg.src = images[i];
+    }
+
+    var figCap = document.createElement("figcaption");
+    figCap.innerHTML = names[i];
+
+    feature.appendChild(birdImg);
+    feature.appendChild(figCap);
+  }
+  }
+  )}
+
+
