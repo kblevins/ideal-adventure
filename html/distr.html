@@ -11,6 +11,14 @@
     <link href="https://fonts.googleapis.com/css?family=Bellefair|Dosis|Almendra+Display" rel="stylesheet">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Links for MomentJS and Bootstrap -->
+    <!-- Include Required Prerequisites -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" /> 
+    <!-- Include Date Range Picker -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
     <!-- Our CSS -->
     <link rel="stylesheet" type="text/css" href="../static/css/style.css">
 </head>
@@ -24,24 +32,63 @@
                 </div>
             </div>
     <div class="container-fluid distrMap">
-        <div class="col-md-9">
-            <!-- map goes here -->
-            <img src="https://lh3.googleusercontent.com/TUTkaXqMRzCFo9KKOtbhT1zzLdJ2vFJMBQx0f8qIgdICDnJ6Ha21B300p9mrSAcjUaxwdKJZPn2gioztDHmhoobug9ar3BaQMPNKP1cVe7Lt4dYy61Qpr6qPc3emjKkY9tR4ySkrQQ" alt="placeholder timelapse map" id="distrMap">
-        </div>
-        <div class="col-md-3" id="playButton">
+        <div class="col-md-4">
             <div class="row">
-                <a href="distr.html"><i class="far fa-play-circle"></i></a>
+                <div id="reportrange" class="pull-right" style="cursor: pointer; width: 100%">
+                    <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
+                    <span></span> <b class="caret"></b>
+                </div>
             </div>
             <div class="row">
-                <!-- <div class="goHome">
-                    <a href="../index.html"><i class="fas fa-home"></i></a>
-                </div> -->
+                <p style="text-align: center;">Select a new date range to search again</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-9">
+                <!-- map goes here -->
+                <img src="https://lh3.googleusercontent.com/TUTkaXqMRzCFo9KKOtbhT1zzLdJ2vFJMBQx0f8qIgdICDnJ6Ha21B300p9mrSAcjUaxwdKJZPn2gioztDHmhoobug9ar3BaQMPNKP1cVe7Lt4dYy61Qpr6qPc3emjKkY9tR4ySkrQQ" alt="placeholder timelapse map" id="distrMap">
+            </div>
+            <div class="col-md-3" id="playButton">
+                <div class="row">
+                    <a href="distr.html"><i class="far fa-play-circle"></i></a>
+                </div>
             </div>
         </div>
     </div>
     <div class="footer">
         <p>Birding Oracle</p>
     </div>
-    <!-- Script for the new map will go here -->
+    <script>
+    // <!-- Script for the new map will go here -->
+
+    // Datepicker
+    $(function() {
+
+    var start = moment().subtract(29, 'days');
+    var end = moment();
+
+    function cb(start, end) {
+        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+    }
+
+    $('#reportrange').daterangepicker({
+        'linkedCalendars': false,
+        startDate: start,
+        endDate: end,
+        ranges: {
+        'Today': [moment(), moment()],
+        'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+        'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+        'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+        'This Month': [moment().startOf('month'), moment().endOf('month')],
+        'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+    }, cb);
+
+    cb(start, end);
+
+    });
+
+    </script>
 </body>
 </html>
