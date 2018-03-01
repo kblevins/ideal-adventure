@@ -1,0 +1,52 @@
+state_abbr,state,center_lat,center_lng,zoom
+AL,Alabama,32.7794,-86.8287,5
+AK,Alaska,64.0685,-152.2782,6
+AZ,Arizona,34.2744,-111.6602,5
+AR,Arkansas,34.8938,-92.4426,5
+CA,California,37.1841,-119.4696,5
+CO,Colorado,38.9972,-105.5478,5
+CT,Connecticut,41.6219,-72.7273,5
+DE,Delaware,38.9896,-75.505,5
+DC,District of Columbia,38.9101,-77.0147,5
+FL,Florida,28.6305,-82.4497,5
+GA,Georgia,32.6415,-83.4426,5
+HI,Hawaii,20.2927,-156.3737,5
+ID,Idaho,44.3509,-114.613,5
+IL,Illinois,40.0417,-89.1965,5
+IN,Indiana,39.8942,-86.2816,5
+IA,Iowa,42.0751,-93.496,5
+KS,Kansas,38.4937,-98.3804,5
+KY,Kentucky,37.5347,-85.3021,5
+LA,Louisiana,31.0689,-91.9968,5
+ME,Maine,45.3695,-69.2428,5
+MD,Maryland,39.055,-76.7909,5
+MA,Massachusetts,42.2596,-71.8083,5
+MI,Michigan,44.3467,-85.4102,5
+MN,Minnesota,46.2807,-94.3053,5
+MS,Mississippi,32.7364,-89.6678,5
+MO,Missouri,38.3566,-92.458,5
+MT,Montana,47.0527,-109.6333,5
+NE,Nebraska,41.5378,-99.7951,5
+NV,Nevada,39.3289,-116.6312,5
+NH,New Hampshire,43.6805,-71.5811,5
+NJ,New Jersey,40.1907,-74.6728,5
+NM,New Mexico,34.4071,-106.1126,5
+NY,New York,42.9538,-75.5268,5
+NC,North Carolina,35.5557,-79.3877,5
+ND,North Dakota,47.4501,-100.4659,5
+OH,Ohio,40.2862,-82.7937,5
+OK,Oklahoma,35.5889,-97.4943,5
+OR,Oregon,43.9336,-120.5583,5
+PA,Pennsylvania,40.8781,-77.7996,5
+RI,Rhode Island,41.6762,-71.5562,5
+SC,South Carolina,33.9169,-80.8964,5
+SD,South Dakota,44.4443,-100.2263,5
+TN,Tennessee,35.858,-86.3505,5
+TX,Texas,31.4757,-99.3312,6
+UT,Utah,39.3055,-111.6703,5
+VT,Vermont,44.0687,-72.6658,5
+VA,Virginia,37.5215,-78.8537,5
+WA,Washington,47.3826,-120.4472,5
+WV,West Virginia,38.6409,-80.6227,5
+WI,Wisconsin,44.6243,-89.9941,5
+WY,Wyoming,42.9957,-107.5512,5
