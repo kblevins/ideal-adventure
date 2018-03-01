@@ -51,8 +51,24 @@ app = Flask(__name__)
 #################################################
 # route that renders index.html template
 @app.route("/")
+def home():
+    return render_template("home.html")
+
+@app.route("/states")
 def state():
     return render_template("states.html")
+
+@app.route("/regional")
+def regional():
+    return render_template("regional.html")
+
+@app.route("/distr")
+def distr():
+    return render_template("distr.html")
+
+@app.route("/species")
+def species():
+    return render_template("species.html")
 
 # route that returns a list of sample names
 @app.route('/siteData/<ST>')
