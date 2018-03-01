@@ -1,6 +1,6 @@
 var stateKeys = Object.keys(state_center);
 
-// Populating dropdown with state names
+// Populating dropdown with region names
 function dropDown(){
   
   var stateDrop = document.getElementById("stateDrop");
