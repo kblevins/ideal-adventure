@@ -1,7 +1,15 @@
-var stateKeys = Object.keys(state_center);
+function stKeys(){
+  url = 'stateCentroid'
+  Plotly.d3.json(url, function(error, data){
+    if (error) return console.warn(error);
+    var st_keys = data.map(record => record[0]);
+  })
+}
+
+//var stateKeys = stKeys();
 
 // Populating dropdown with state names
-function dropDown(){
+function stateDropDown(){
   
   var stateDrop = document.getElementById("stateDrop");
   for (i = 0; i < stateKeys.length; i++) {
@@ -13,14 +21,19 @@ function dropDown(){
     }
 
 function stateName(ST){
-  var st_head = document.getElementById("stateName");
-  st_head.innerHTML = state_center[ST].state;
+  url = 'stateCentroid'
+  Plotly.d3.json(url, function(error, data){
+    if (error) return console.warn(error);
+
+    var st_head = document.getElementById("stateName");
+    st_head.innerHTML = data[ST][0];
+  })
 }
 // on first load
-stateName("AL");
+// stateName("AL");
 
 // create dropdown
-dropDown();
+stateDropDown();
 
 // insert state name into header
 stateName("AL");
@@ -42,8 +55,6 @@ function optionChanged(ST){
   siteChart(ST);
   birdPhotos(ST);
   }
-
-
 
 function siteChart(ST){
   url = 'siteData/'+ST;
@@ -75,8 +86,8 @@ function siteChart(ST){
 }
 )}
 
-function birdPhotos(ST){
-  url = 'birdData/'+ST;
+function birdPhotos(data){
+  url = 'birdData/'+data;
   Plotly.d3.json(url, function(error, birdData){
     if (error) return console.warn(error);
   var names = birdData.map(record => record.comName);
@@ -108,6 +119,85 @@ function birdPhotos(ST){
     feature.appendChild(figCap);
   }
   }
-  )}
+)}
+
+var regionKeys = Object.keys(region_center);
+
+// Populating dropdown with state names
+function regionDropDown(){
+  
+  var regionDrop = document.getElementById("regionDrop");
+  for (i = 0; i < regionKeys.length; i++) {
+          var regionOp = document.createElement("option");
+          regionOp.text = regionKeys[i];
+          regionOp.value= regionKeys[i];
+          regionDrop.appendChild(regionOp);
+      }
+    }
+
+function RegionName(Region){
+  var rg_head = document.getElementById("regionName");
+  rg_head.innerHTML = Region
+}
+
+
+// on first load
+RegionName("PacificNorthwest");
+
+// create dropdown
+RegionDropDown();
+
+// insert state name into header
+RegionName("PacificNorthwest");
+
+// initializing map
+RegionMap("PacificNorthwest");
+
+// initializing chart
+regionChart("PacificNorthwest");
+
+// initialize bird list
+
+// initialize bird photos
+birdPhotos("PacificNorthwest");
+
+// what to do when the region is changed
+function optionChanged(Region){
+  console.log(Region);
+  RegionName(Region);
+  RegionMap(Region);
+  regionChart(Region);
+  birdPhotos(Region);
+  }
+
+function regionChart(Region){
+  url = 'regionData/'+Region;
+  Plotly.d3.json(url, function(error, regionData){
+    if (error) return console.warn(error);
+  var values = regionData.map(record => record.species_number);
+  var sites = regionData.map(record => record.locName);
+
+  var data = [
+    {
+      x: [1,2,3,4,5,6,7,8,9,10],
+      y: values,
+      type: 'bar',
+      text: sites,
+      marker: {
+        color: '#9e9ac8'
+      }
+    }
+  ];
+
+  var layout = {
+    title: "Top 10 Birding Sites",
+    xaxis: {
+      dtick: 1
+    }
+  };
+
+  Plotly.newPlot('regionChart', data, layout);
+  }
+)}
 
 

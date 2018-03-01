@@ -38,7 +38,7 @@ a:hover {
 
 /* Header styling */
 .headerHome {
-    padding: 50px !important;
+    padding: 40px !important;
     background-color: #640000d5 !important;
     border-bottom: 3px solid #af7d32;
     border-top: 3px solid #af7d32;
@@ -106,7 +106,7 @@ h2 {
 
 
 .landingPage {
-    padding-top: 20px;
+    padding-top: 40px;
 }
 
 /* Image Thumbnail Styling*/
