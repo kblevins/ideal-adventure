@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Birding Oracle</title>
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bellefair|Dosis|Alex+Brush|Astloch|Almendra+Display" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <!-- Favicon -->
+    <link href="../static/images/favicon.ico" rel="icon" type="image/x-icon" />
+    <!-- Links for MomentJS and Bootstrap -->
+    <!-- Include Required Prerequisites -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
+    
+    <!-- Include Date Range Picker -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+</head>
+<body class="home">
+        <div class="headerHome" id="header">
+            <h1 class="animated fadeIn">Birding Oracle</h1>
+        </div>
+    <div class="container-fluid landingPage">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="tab">
+                <button class="tablinks" onclick="openSearch(event, 'speciesHotSpots')">Species Hot-spots</button>
+                <button class="tablinks" onclick="openSearch(event, 'stateHotSpots')">Hot-spots by State</button>
+                <button class="tablinks" onclick="openSearch(event, 'regionalHotSpots')">Hot-spots by Region</button>
+                <button class="tablinks" onclick="openSearch(event, 'speciesDistr')">Species Distribution Over Time</button>
+            </div>
+            
+            <div id="speciesHotSpots" class="tabcontent">
+                <div class="input-group" id="species">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <span class="input-group-btn">
+                        <a href="../html/species.html">
+                            <button class="btn btn-default" type="button"><i class="fas fa-search"></i></button>
+                        </a>
+                    </span>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://lh3.googleusercontent.com/3jHYinmjBtqYetiGnS5i4bPQCBQcef6G-iK8DhSPgccgz7Wv_gY53B13c0JCLlfXyE3dAUZc0ekW8JBG1XM42sGBHs8PjaMwFY8yGcnsHGAi7cjBGEd-p_7t02ymgS-sGSulX13ucw" alt="species" class="img-thumbnail">
+                </div>
+                <div class="col-md-6" id="searchEx">
+                    <p>Choose a species code from <a target="_blank" href="">this</a> table and search for overall hot-spots</p>
+                
+                    <p>Example: chotin1 will return a map of hot-spots for a Choco Tinamou</p>
+                </div>    
+            </div>
+
+            <div id="stateHotSpots" class="tabcontent">
+                <div class="input-group" id="states">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <span class="input-group-btn">
+                        <a href="../html/states.html">
+                            <button class="btn btn-default" type="button"><i class="fas fa-search"></i></button>
+                        </a>
+                    </span>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div id="selectNumber">
+                            <form id="myForm">
+                                <select name="selectState" id="selectState">
+                                    <option>Select a State</option>
+                                </select>
+                            </form>
+                        </div>
+                    </div> 
+                    <div class="row">
+                        <img src="https://lh3.googleusercontent.com/2yWI1q3cRgh03sW90qbefQ1qbmS956EeAauIME9bsuQ7FK0SatRgWYS-9rGgqZROe1u876uqNd0blKBSEFk3Gkwd9-CnmT6opexdxz3OudksCjNmHks5G7VDQyKIqNnwZAD4t5XOmw" alt="states" class="img-thumbnail">
+                    </div>  
+                </div>   
+                <div class="col-md-6" id="searchEx">
+                    <p>Select only a state to return the top 5 species hot-spots and top 10 hot-spot locations for that state</p>
+                
+                    <p>Select a state and <a target="_blank" href="">species</a> to search for specific species' hot-spots and locational hot-spots within that state</p>
+                </div>   
+            </div>
+            
+            <div id="regionalHotSpots" class="tabcontent">
+                <div class="input-group" id="regional">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <span class="input-group-btn">
+                        <a href="../html/regional.html">
+                            <button class="btn btn-default" type="button"><i class="fas fa-search"></i></button>
+                        </a>
+                    </span>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div id="selectNumber">
+                            <form id="myForm">
+                                <select name="selectRegion" id="selectRegion">
+                                    <option>Select a Region</option>
+                                </select>
+                            </form>
+                        </div>
+                    </div> 
+                    <div class="row">
+                        <a target="_blank"href="https://lh3.googleusercontent.com/kRuMIRdbj1NFaIzUFtn9Lyc_PPzoTPxvm-mf4Rka4NQmWs5rg2oHyITat2bp8l7g2LjdxDnAqfxXjxhMR_P7rc5G8K29DUW-YwyEgFtfECQOQ_X0FOtOLVGr11r1HJbWSmbiksDKTA">
+                            <img src="https://lh3.googleusercontent.com/jylH5vdtTRBAYvPgECKlYv4atO1BaQrJAm8xlAw851uNWjDFV7J3CP5i5Y65Ye1rv4Won42MOCdzGuKm96iR4vCvxJnV8vxE9YrYIwEArtBqd7ZKQXVbq_oZ3ExQwPfRR_VlMQAWuQ" alt="regions" class="img-thumbnail">
+                        </a>
+                    </div>
+                </div>  
+                <div class="col-md-6" id="searchEx">
+                    <p>Select only a region to search for the top 5 species hot-spots and top 10 location hot-spots within that region</p>
+                
+                    <p>Select a region and species to search for specific species' hot-spots and locational hot-spots within that region</p>
+                   
+                    <p>Click the map to see a regional breakdown</p>
+                </div>
+            </div>
+            
+            <div id="speciesDistr" class="tabcontent">
+                    <div class="input-group" id="time">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+                            <a href="../html/distr.html">
+                                <button class="btn btn-default" type="button"><i class="fas fa-search"></i></button>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10">
+                        <div id="reportrange" class="pull-right" style="cursor: pointer; width: 100%">
+                            <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
+                            <span></span> <b class="caret"></b>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                <div class="col-md-7">
+                    <img src="https://lh3.googleusercontent.com/gtTL-gw0auQ5GqJFsdmvaoBA_lpebABFY8eWDgQIEmzSiWyTbludVF5V0YVsBK4vlodfCwQK0lKZZPhqJnQK6X3Y1uehByI_S-_hDNCw-7Q3JLmv1hYIDw93ar8FEQMFPjZTx553xw" alt="regions" class="img-thumbnail">
+                    <br><p class="label">Common Yellowthroat | eBird</p>
+                </div>
+                <div class="col-md-5" id="searchEx">
+                    <!-- <div class="row">
+                        
+                    </div> -->
+                    <div class="row">
+                        <p>Enter a date or range of dates to search for species distribution over time</p>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <div class="col-md-2"></div>   
+    </div>
+    <div class="container-fluid">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div id="intro"><p>Bird species searches based upon species hot-spots, hot-spots by state, hot-spots by region, and also a species distribution over time.</p></div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+    <script>
+    function openSearch(evt, birdSearch) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the link that opened the tab
+    document.getElementById(birdSearch).style.display = "block";
+    evt.currentTarget.className += " active";
+    }
+
+    // To have one tab open by default
+    document.getElementsByClassName('tablinks')[0].click()
+
+    // Adding a dropdown to search for species by state
+    var selectState = document.getElementById("selectState");
+
+    var states = 	/* states to populate the dropdown */	
+        ["HI", "AK", "FL", "SC", "GA", "AL", "NC", "TN", "RI", "CT", "MA",
+        "ME", "NH", "VT", "NY", "NJ", "PA", "DE", "MD", "WV", "KY", "OH", 
+        "MI", "WY", "MT", "ID", "WA", "DC", "TX", "CA", "AZ", "NV", "UT", 
+        "CO", "NM", "OR", "ND", "SD", "NE", "IA", "MS", "IN", "IL", "MN", 
+        "WI", "MO", "AR", "OK", "KS", "LA", "VA"]
+    states.sort(); /* placing the states in alphabetical order */
+
+    // loop through the array to populate the dropdown list
+    for(var i = 0; i < states.length; i++) {
+        var optS = states[i];
+        var elS = document.createElement("option");
+        elS.textContent = optS;
+        elS.value = optS;
+        selectState.appendChild(elS);
+    }
+
+    // Creating a dropdown for regional search
+    var selectRegion = document.getElementById("selectRegion");
+
+    var regions = /* regions to populate the dropdown */
+        ["Pacific Northwest", "Pacific Southwest/Great Basin", "Northern Plains",
+        "Southern Rockies/Colorado Plateau", "Central Plains", "Southern Plains",
+        "Great Lakes", "Prairie Peninsula", "Ozarks", "Northeast", "Mid-Atlantic/Appalachians",
+        "Southeast"]
+    regions.sort(); /* placing the regions in alphabetical order */
+    
+    // loop through regions array to populate the dropdown list
+    for(var i = 0; i < regions.length; i++) {
+        var optR = regions[i];
+        var elR = document.createElement("option");
+        elR.textContent = optR;
+        elR.value = optR;
+        selectRegion.appendChild(elR);
+    }
+    
+    // Datepicker
+    $(function() {
+
+    var start = moment().subtract(29, 'days');
+    var end = moment();
+
+    function cb(start, end) {
+        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+    }
+
+    $('#reportrange').daterangepicker({
+        'linkedCalendars': false,
+        startDate: start,
+        endDate: end,
+        ranges: {
+        'Today': [moment(), moment()],
+        'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+        'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+        'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+        'This Month': [moment().startOf('month'), moment().endOf('month')],
+        'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+    }, cb);
+
+    cb(start, end);
+
+    });
+
+    // Moment JS Fun
+
+
+    </script>
+</body>
+</html>

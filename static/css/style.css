@@ -9,7 +9,7 @@ body {
     background-image: url("https://lh3.googleusercontent.com/4XfWrXjO-8nnPqHrSXGCN7WRkRhVNXBxU38qczh_TxT8yxG1DoSSi8O_fIOd9pTogi9WZf_5XRnX7NGhf3Uw3nbhjFjfCJGsLmfc1A6PZOI_V8TR4xeT6mfZ_h1RkJIdbOJXB5zYcA=s208-p-k");
     background-color: #640000;
     text-align: center;
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Dosis', sans-serif !important;
 }
 
 /* Home button on each page */
@@ -104,21 +104,6 @@ a:hover {
     color: #c8af7d !important;
 }
 
-.startDate, .endDate {
-    width: 100%;
-    padding-bottom: 10px;
-    margin-top: -5px !important;
-    color: #c8af7d; 
-}
-
-.startDate {
-    text-align: right;
-}
-
-.endDate {
-    text-align: left;
-}
-
 
 .landingPage {
     padding-top: 20px;
@@ -147,9 +132,9 @@ a:hover {
 
 /* Button styling */
 .btn {
-    background-color: #c8af7d00;
-    color: #c8af7d;
-    border: none;
+    background-color: #c8af7d00 !important;
+    color: #c8af7d !important;
+    border: none !important;
 }
 
 .btn:hover {
@@ -200,7 +185,7 @@ a:hover {
 /* Style the tab content */
 .tabcontent {
     float: left;
-    padding: 0px 12px;
+    padding: 0px 15px;
     width: 70%;
     height: 320px;
     background-color: #6400009d;
@@ -218,6 +203,14 @@ a:hover {
 
 .tabcontent #searchEx {
     text-align: left !important;
+}
+
+#time, #regional, #states, #species {
+    margin-bottom: 0 !important;
+}
+
+#selectNumber {
+    margin-bottom: 5px !important;
 }
 
 .tabcontent a {
@@ -248,19 +241,84 @@ input[type="text"]:placeholder { /* Most modern browsers support this now. */
    color:    #c8af7d;
 }
 
+/* Daterange Picker */
+.pull-right {
+    background-color: #420101d7;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    padding: 5px;
+    color: #c8af7d;
+}
+
+.dropdown-menu {
+    background-color: #420101 !important;
+}
+
+.dropdown-menu li {
+    background-color: #5e0101 !important;
+    color: #c8af7d !important;
+    border: 1px solid #c8af7d !important;
+}
+
+.dropdown-menu li:hover {
+    background-color: #c8af7d !important;
+    color: #5e0101 !important;
+    border: 1px solid #5e0101 !important;
+}
+
+.dropdown-menu .active {
+    background-color: #976211 !important;
+    color: #c8af7d !important;
+    border: 1px solid #c8af7d !important;
+}
+.dropdown-menu .fa-calendar {
+    color: #976211 !important;
+}
+
+.dropdown-menu .calendar-table {
+    background-color: #c8af7d !important;
+    border: 1px solid #976211 !important;
+}
+
 .landingPage #stateHotSpots img {
     max-width: 200px;
 }
 
+.dropdown-menu button {
+    text-align: center !important;
+}
+
+.right .input-mini {
+    background-color: #c8af7d !important;
+    border: 1px solid #976211 !important;
+    color: #420101 !important;
+}
+
+.calendar-table {
+    color: #420101 !important;
+}
+
+.calendar-table .off {
+    color: #c8af7d !important;
+}
+
+.calendar-table .in-range {
+    background-color: #976211 !important;
+}
+
+.weekend, .off, .available {
+    background-color: #af9664 !important;
+}
+
 select {
     background-color: #420101d7;
-    border: none;
-    color: #c8af7d;
-    margin-bottom: 2px;
+    border: none !important;
+    color: #c8af7d !important;
+    margin-bottom: 2px !important;
 }
 
 select i {
-    color: #c8af7d;
+    color: #c8af7d !important
 }
 
 /* Styling for species page */
