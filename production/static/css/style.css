@@ -1,0 +1,472 @@
+html,
+body, {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+    background-image: url("https://lh3.googleusercontent.com/4XfWrXjO-8nnPqHrSXGCN7WRkRhVNXBxU38qczh_TxT8yxG1DoSSi8O_fIOd9pTogi9WZf_5XRnX7NGhf3Uw3nbhjFjfCJGsLmfc1A6PZOI_V8TR4xeT6mfZ_h1RkJIdbOJXB5zYcA=s208-p-k");
+    background-color: #640000;
+    text-align: center;
+    font-family: 'Dosis', sans-serif !important;
+}
+
+/* Home button on each page */
+.goHome {
+    font-size: 50px;
+    text-align: center;
+}
+
+.goHome a {
+    color: #af7d32;
+}
+
+.goHome a:hover {
+    color: #976211;
+}
+
+/* other hyperlinks */
+
+a {
+    color: #640000;
+}
+
+a:hover {
+    color: #976211;
+}
+
+/* Header styling */
+.headerHome {
+    padding: 80px !important;
+    background-color: #640000d5 !important;
+    border-bottom: 3px solid #af7d32;
+    border-top: 3px solid #af7d32;
+    color: #af9664;
+    margin: 0;
+    font-family: 'Almendra Display', cursive !important;
+}
+
+.headerHome h1 {
+    font-size: 80px !important;
+    padding: 50px !important;
+}
+
+.header {
+    padding: 30px;
+    background-color: #640000d5 !important;
+    border-bottom: 3px solid #af7d32;
+    border-top: 3px solid #af7d32;
+    color: #af9664;
+    margin: 0;
+    font-family: 'Almendra Display', cursive !important;
+}
+
+h2 {
+    font-size: 60px !important;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #af7d3286;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #af7d32;
+    text-align: left;
+    border-bottom: 3px solid #af7d32;
+    border-top: 3px solid #af7d32;
+    font-family: 'Almendra Display', cursive !important;
+}
+
+.footer p {
+    margin-top: 8px;
+    margin-left: 5px;
+}
+
+
+/* Landing Page */
+.home {
+    background-image: url("../images/sunsetBirds.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: auto 1200px;
+}
+
+
+/* Input styling */
+.input-group {
+    width: 80%;
+    padding: 10px;
+    margin: 1em auto .5em auto;
+    color: #c8af7d !important;
+}
+
+
+.landingPage {
+    padding-top: 20px;
+}
+
+/* Image Thumbnail Styling*/
+.landingPage img {
+    border: 1px solid #ddd; 
+    border-radius: 4px;
+    padding: 5px;
+    width: 300px;
+    margin: auto;
+}
+
+.landingPage input {
+    border-radius: 10px !important;
+    border: 1px solid #640000;
+    background-color: #420101d7;
+    color: #c8af7d !important;
+}
+
+.landingPage .img-thumbnail {
+    border: 1px solid #640000;
+    padding: 0;
+}
+
+/* Button styling */
+.btn {
+    background-color: #c8af7d00 !important;
+    color: #c8af7d !important;
+    border: none !important;
+}
+
+.btn:hover {
+    background-color: #af7d32;
+    color: #640000;
+}
+
+/* Paragraph styling for our description */
+#intro {
+    color: #c8af7d;
+    background-color: #420101d7;
+    padding: 10px;
+}
+
+/* Search Tabs */
+.tab {
+    float: left;
+    background-color: #c8af7d;
+    width: 30%;
+    height: 320px;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    border-right: none;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #e4c891;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+    background-color: #af7d32;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 15px;
+    width: 70%;
+    height: 320px;
+    background-color: #6400009d;
+}
+
+.tabcontent .label {
+    font-size: 12px;
+    color: #c8af7d;
+}
+
+.tabcontent #searchEx, img {
+    margin-top: 5%;
+    color: #c8af7d;
+}
+
+.tabcontent #searchEx {
+    text-align: left !important;
+}
+
+#time, #regional, #states, #species {
+    margin-bottom: 0 !important;
+}
+
+#selectNumber {
+    margin-bottom: 5px !important;
+}
+
+.tabcontent a {
+    color: #c8af7d !important;
+    text-decoration: underline;
+}
+
+/* Styling placeholder text is annoying */
+input[type="text"]::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #c8af7d;
+}
+input[type="text"]:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #c8af7d;
+   opacity:  1;
+}
+input[type="text"]::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #c8af7d;
+   opacity:  1;
+}
+input[type="text"]:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #c8af7d;
+}
+input[type="text"]:-ms-input-placeholder { /* Microsoft Edge */
+   color:    #c8af7d;
+}
+
+input[type="text"]:placeholder { /* Most modern browsers support this now. */
+   color:    #c8af7d;
+}
+
+/* Daterange Picker */
+.pull-right {
+    background-color: #420101d7;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    padding: 5px;
+    color: #c8af7d;
+}
+
+.dropdown-menu {
+    background-color: #420101 !important;
+}
+
+.dropdown-menu li {
+    background-color: #5e0101 !important;
+    color: #c8af7d !important;
+    border: 1px solid #c8af7d !important;
+}
+
+.dropdown-menu li:hover {
+    background-color: #c8af7d !important;
+    color: #5e0101 !important;
+    border: 1px solid #5e0101 !important;
+}
+
+.dropdown-menu .active {
+    background-color: #976211 !important;
+    color: #c8af7d !important;
+    border: 1px solid #c8af7d !important;
+}
+.dropdown-menu .fa-calendar {
+    color: #976211 !important;
+}
+
+.dropdown-menu .calendar-table {
+    background-color: #c8af7d !important;
+    border: 1px solid #976211 !important;
+}
+
+.landingPage #stateHotSpots img {
+    max-width: 200px;
+}
+
+.dropdown-menu button {
+    text-align: center !important;
+}
+
+.right .input-mini {
+    background-color: #c8af7d !important;
+    border: 1px solid #976211 !important;
+    color: #420101 !important;
+}
+
+.calendar-table {
+    color: #420101 !important;
+}
+
+.calendar-table .off {
+    color: #c8af7d !important;
+}
+
+.calendar-table .in-range {
+    background-color: #976211 !important;
+}
+
+.weekend, .off, .available {
+    background-color: #af9664 !important;
+}
+
+select {
+    background-color: #420101d7;
+    border: none !important;
+    color: #c8af7d !important;
+    margin-bottom: 2px !important;
+}
+
+select i {
+    color: #c8af7d !important
+}
+
+/* Styling for species page */
+.speciesMap #leftSideBar {
+    margin-top: 25%;
+}
+
+.speciesMap #speciesChart  {
+    margin-top: 15%;
+}
+
+.fa-volume-up, fa-home {
+    font-size: 100px;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.speciesMap img {
+    max-width: 100%;
+    height: auto; 
+}
+
+.speciesMap .birdSelect {
+    padding-top: 40px;
+    padding-left: 20px;
+    border-radius: 5px;
+}
+
+.speciesMap #speciesChart {
+    padding-right: 20px;
+}
+/* Styling for state page */
+
+.stateSelect {
+    font-family: 'Dosis', sans-serif !important;
+    margin-top: 50%;
+}
+
+.gallery .figure {
+    padding-bottom: 5px;
+}
+
+/* Styling for regional page */
+.regionMap {
+    text-align: center;
+}
+
+.regionMap img {
+    max-width: 100%;
+    height: auto; 
+    /* padding: 10px; */
+}
+
+/* Image captions */
+.regionMap .caption {
+    padding-bottom: 10px;
+}
+
+/* Home button */
+.regionMap .goHome {
+    margin-top: 40%;
+}
+
+/* Regional & State Page Footers */
+#STUPID {
+    background-color: #af7d3286;
+    border-top: 3px solid #af7d32;
+    text-align: center;
+}
+
+/* Top 5 bird images */
+#STUPID img {
+    max-width: 150px;
+    border: none !important;
+    filter: sepia(100%);
+}
+
+#STUPID img:hover {
+    filter: none;
+}
+
+
+/* END REGIONAL & STATE FOOTERS */
+
+/* Top 5 birds in region list */
+.regionMap ul {
+    list-style: none;
+}
+
+/* Styling for distribution page */
+.distrMap {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+}
+
+.distrMap .fa-play-circle {
+    font-size: 100px;
+    margin-top: 50%;
+    text-align: center;
+}
+
+/* Styling for map */
+.state{
+    fill: none;
+    stroke: #a9a9a9;
+    stroke-width: 1;
+}
+.state:hover{
+    fill-opacity:0.5;
+}
+#tooltip {   
+    position: absolute;           
+    text-align: center;
+    padding: 20px;             
+    margin: 10px;
+    font: 12px sans-serif;        
+    background: lightsteelblue;   
+    border: 1px;      
+    border-radius: 2px;           
+    pointer-events: none;         
+}
+#tooltip h4{
+    margin:0;
+    font-size:14px;
+}
+#tooltip{
+    background:rgba(0,0,0,0.9);
+    border:1px solid grey;
+    border-radius:5px;
+    font-size:12px;
+    width:auto;
+    padding:4px;
+    color:white;
+    opacity:0;
+}
+#tooltip table{
+    table-layout:fixed;
+}
+#tooltip tr td{
+    padding:0;
+    margin:0;
+}
+#tooltip tr td:nth-child(1){
+    width:50px;
+}
+#tooltip tr td:nth-child(2){
+    text-align:center;
+}
