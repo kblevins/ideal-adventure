@@ -51,11 +51,11 @@ def getRegionData(Region):
 # Part 2 - Get top 10 locations
 def getTop10(df):
     # create subset of columns to evaluate
-    df_s = df.loc[:,['locName', 'comName']]
+    df_s = df.loc[:,['locName', 'lat', 'lng','comName']]
     # remove duplicate records
     df_s = df_s.drop_duplicates()
     # create count of species observations from each location
-    counts = df_s.groupby(['locName'])['locName'].count()
+    counts = df_s.groupby(['locName', 'lat', 'lng'])['locName'].count()
     # sort by the species count
     counts = counts.sort_values(ascending = False)
     # subset for top 10
@@ -66,16 +66,11 @@ def getTop10(df):
     top_ten = pd.DataFrame(top_ten)
     # reset index
     top_ten = top_ten.reset_index()
-    # subset original df for spatial columns
-    locs = df.loc[:,['lat', 'lng', 'locName']]
-    # remove duplicate rows
-    locs = locs.drop_duplicates()
-    # merge with top_ten df
-    top_ten = top_ten.merge(locs)
     # convert to json
-    top10_loc = top_ten.to_json(orient='records', force_ascii=False)
+    top_tenj = top_ten.to_json(orient='records', force_ascii=False)
+    top_tenj = top_tenj.replace("\\","")
+    return(top_tenj)
 
-    return(top10_loc)
 
     # Part 3 - Get top 5 species at each location
     # subset original df for the top 10 locations
