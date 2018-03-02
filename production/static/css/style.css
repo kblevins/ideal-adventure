@@ -325,10 +325,6 @@ select i {
 }
 
 /* Styling for species page */
-.speciesMap #leftSideBar {
-    margin-top: 25%;
-}
-
 
 .fa-volume-up, fa-home {
     font-size: 100px;
@@ -337,15 +333,16 @@ select i {
     padding: 10px;
 }
 
-.speciesMap img {
-    max-width: 100%;
-    height: auto; 
+.birdz img {
+    margin: 0 15px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,.3);
+    background-color: rgb(248, 245, 245);
 }
 
-.speciesMap .birdSelect {
-    padding-top: 40px;
-    padding-left: 20px;
-    border-radius: 5px;
+.birdz audio {
+    margin-top: 10px;
+    position: relative;
 }
 
 /* Styling for state page */
@@ -383,6 +380,24 @@ select i {
 #STUPID {
     text-align: center;
 }
+
+/* #STUPID a {
+    background: whitesmoke;
+    margin: 0 15px 30px;
+    padding: 10px 10px 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,.3);
+    transition: all .15s linear;
+    z-index:0;
+    position: relative;
+}
+
+#STUPID a:after {
+    color: whitesmoke;
+    font-size: 20px;
+    content: attr(title);
+    position: relative;
+    top: 15px; */
+/* } */
 
 /* Top 5 bird images */
 #STUPID img {
