@@ -10,107 +10,32 @@ import plotly.plotly
 ## at each location 
 def getRegionData(Region):
     #Define regions
-    PacificNorthwest = ["WA", "OR"]
-    NorthernPlains = ["ID", "MT", "WY", "ND", "SD"]
-    PacificSouthwest = ["CA", "NV"]
-    SouthernRockies = ["UT", "CO", "AZ", "NM"]
-    CentralPlains = ["NE", "KS", "OK"]
-    SoutherPlains = ["TX"]
-    Ozarks = ["MO", "AR", "LA", "MS", "AL" "TN"]
-    Southeast = ["FL", "GA"]
-    MidAtlantic = ["SC", "NC", "VA", "WV", "KY"]
-    PrairiePeninsula = ["IW", "IL", "IN"]
-    GreatLakes = ["MN", "WI", "MI"]
-    Northeast =["PA", "NY", "NJ", "CT", "RI", "MA", "NH", "VT", "ME"]
+    regDict = {
+        "PacificNorthwest": ["WA", "OR"],
+        "NorthernPlains": ["ID", "MT", "WY", "ND", "SD"],
+        "PacificSouthwest": ["CA", "NV"],
+        "SouthernRockies": ["UT", "CO", "AZ", "NM"],
+        "CentralPlains": ["NE", "KS", "OK"],
+        "SoutherPlains": ["TX"],
+        "Ozarks": ["MO", "AR", "LA", "MS", "AL", "TN"],
+        "Southeast": ["FL", "GA"],
+        "MidAtlantic": ["SC", "NC", "VA", "WV", "KY"],
+        "PrairiePeninsula": ["IA", "IL", "IN"],
+        "GreatLakes": ["MN", "WI", "MI"],
+        "Northeast": ["PA", "NY", "NJ", "CT", "RI", "MA", "NH", "VT", "ME"]
+    }
     headers = {'X-eBirdApiToken': 'p54pcbn15ebh'}
-    response_list = []
     
+    target = regDict[Region]
+        
+    response_list = []
     #if statement that locates matches user input to region
-    if Region == "PacificNorthwest":
-        for states in PacificNorthwest:
-            url = f"https://ebird.org/ws2.0/data/obs/US-"+states+"/recent/?back=30"
+    for state in target:
+        url = f"https://ebird.org/ws2.0/data/obs/US-"+state+"/recent/?back=30"
 #             print(url)
-            local_response = requests.get(url, headers=headers)
-            data = local_response.text
-            response_list.append(data)
-#            print(response_list)
-    elif Region == "NorthernPlains":
-        for states in NorthernPlains:
-            url = f"https://ebird.org/ws2.0/data/obs/US-"+states+"/recent/?back=30"
-            local_response = requests.get(url, headers=headers)
-            data = local_response.text
-            response_list.append(data)
-#             print(response_list)
-    elif Region == "PacificSouthwest":
-        for states in PacificSouthwest:
-            url = f"https://ebird.org/ws2.0/data/obs/US-"+states+"/recent/?back=30"
-            local_response = requests.get(url, headers=headers)
-            data = local_response.text
-            response_list.append(data)
-#             print(response_list)
-    elif Region == "SouthernRockies":
-        for states in SouthernRockies:
-            url = f"https://ebird.org/ws2.0/data/obs/US-"+states+"/recent/?back=30"
-            local_response = requests.get(url, headers=headers)
-            data = local_response.text
-            response_list.append(data)
-#             print(response_list)
-    elif Region == "CentralPlains":
-        for states in CentralPlains:
-            url = f"https://ebird.org/ws2.0/data/obs/US-"+states+"/recent/?back=30"
-            local_response = requests.get(url, headers=headers)
-            data = local_response.text
-            response_list.append(data)
-#            print(response_list)
-    elif Region == "SouthernPlains":
-        for states in SoutherPlains:
-            url = f"https://ebird.org/ws2.0/data/obs/US-"+states+"/recent/?back=30"
-            local_response = requests.get(url, headers=headers)
-            data = local_response.text
-            response_list.append(data)
-#             print(response_list)
-    elif Region == "Ozarks":
-        for states in Ozarks:
-            url = f"https://ebird.org/ws2.0/data/obs/US-"+states+"/recent/?back=30"
-            local_response = requests.get(url, headers=headers)
-            data = local_response.text
-            response_list.append(data)
-#             print(response_list)
-    elif Region == "Southeast":
-        for states in Southeast:
-            url = f"https://ebird.org/ws2.0/data/obs/US-"+states+"/recent/?back=30"
-            local_response = requests.get(url, headers=headers)
-            data = local_response.text
-            response_list.append(data)
-#             print(response_list)
-    elif Region == "MidAtlantic":
-        for states in MidAtlantic:
-            url = f"https://ebird.org/ws2.0/data/obs/US-"+states+"/recent/?back=30"
-            local_response = requests.get(url, headers=headers)
-            data = local_response.text
-            response_list.append(data)
-#             print(response_list)
-    elif Region == "PrairiePeninsula":
-        for states in PrairiePeninsula:
-            url = f"https://ebird.org/ws2.0/data/obs/US-"+states+"/recent/?back=30"
-            local_response = requests.get(url, headers=headers)
-            data = local_response.text
-            response_list.append(data)
-#             print(response_list)
-    elif Region == " GreatLakes":
-        for states in GreatLakes:
-            url = f"https://ebird.org/ws2.0/data/obs/US-"+states+"/recent/?back=30"
-            local_response = requests.get(url, headers=headers)
-            data = local_response.text
-            response_list.append(data)
-#             print(response_list)
-    elif Region == "Northeast":
-        for states in Northeast:
-            url = f"https://ebird.org/ws2.0/data/obs/US-"+states+"/recent/?back=30"
-            local_response = requests.get(url, headers=headers)
-            data = local_response.text
-            response_list.append(data)
-#             print(respons.hee_list)
+        local_response = requests.get(url, headers=headers)
+        data = local_response.text
+        response_list.append(data)
 
     totallist = []
     for idx,item in enumerate(response_list):
