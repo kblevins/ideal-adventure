@@ -177,6 +177,20 @@ def speciesData(species, days):
     
     return speciesData
 
+@app.route('/birdDB')
+def birdDBList():
+    results = session.query(Bird.Species_Code, Bird.Common_Name)
+
+    #Convert the query results to a Dictionary using date as the key and tobs as the value.
+    data = []
+
+    # populate dict with rows from results
+    for row in results:
+        spRecord = {'code': row.Species_Code, 'comName': row.Common_Name}
+        data.append(spRecord)
+
+    return jsonify(data)
+
 @app.route('/birdDB/<spCode>')
 def birdDBPrint(spCode):
     results = session.query(Bird.Species_Code, Bird.Common_Name, Bird.Img_URL, Bird.Audio_URL, Bird.Info_URL).filter(Bird.Species_Code==spCode)
