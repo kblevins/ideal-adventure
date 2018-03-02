@@ -4,7 +4,7 @@ function stateMap(ST){
   Plotly.d3.json(url, function(error, data){
     if (error) return console.warn(error);
 
-    document.getElementById('stateMap').innerHTML = "<div id='map' style='width: 500px; height: 450px;'></div>";
+    document.getElementById('stateMap').innerHTML = "<div id='map'></div>";
     var osmUrl = "https://api.mapbox.com/styles/v1/kkblevins/cje0f0el638792rmw5y3yw648/tiles/256/{z}/{x}/{y}?"+
     "access_token=pk.eyJ1Ijoia2tibGV2aW5zIiwiYSI6ImNqZGhqeWlxaDBiZ2kydnNhYTlseDE3eTYifQ.EWlCoyNVcod37iJ0nUdG3w"
     osmLayer = new L.TileLayer(osmUrl);
@@ -28,7 +28,7 @@ function stateMap(ST){
       var feature = data[i];
       
       L.marker([feature.lat, feature.lng], {icon: birdIcon})
-        .bindPopup("<h3>" + feature.locName + "</h3><ul><p>" + feature.species_number + " birds</p>")
+        .bindPopup("<h3>" + feature.locName + "</h3><ul><p>" + feature.species_number + " birds</p></ul>")
         .addTo(map);
         
     }

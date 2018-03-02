@@ -65,10 +65,12 @@ function siteChart(ST){
   ];
 
   var layout = {
-    title: "Top 10 Birding Sites",
     xaxis: {
-      dtick: 1
-    }
+      dtick: 1,
+      title: "Top 10 Birding Sites"
+    },
+    plot_bgcolor: 'rgba(0,0,0,0)',
+    paper_bgcolor: 'rgba(0,0,0,0)'
   };
 
   Plotly.newPlot('sitesChart', data, layout);
