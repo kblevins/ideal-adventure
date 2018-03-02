@@ -7,6 +7,7 @@ import requests
 import plotly.plotly
 import getStateData
 import getRegionData
+import getSpeciesData
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
@@ -170,7 +171,26 @@ def regionCentroid():
 
     return jsonify(data)
 
+@app.route('/speciesData/<species>')
+def speciesData(species):
+    speciesData = getSpeciesData.speciesData(species)
+    
+    return speciesData
 
+@app.route('/birdDB/<spCode>')
+def birdDBPrint(spCode):
+    results = session.query(Bird.Species_Code, Bird.Common_Name, Bird.Img_URL, Bird.Audio_URL, Bird.Info_URL).filter(Bird.Species_Code==spCode)
+
+    #Convert the query results to a Dictionary using date as the key and tobs as the value.
+    data = []
+
+    # populate dict with rows from results
+    for row in results:
+        spRecord = {'code': row.Species_Code, 'comName': row.Common_Name, 
+        'img': row.Img_URL, 'audio': row.Audio_URL, 'link': row.Info_URL}
+        data.append(spRecord)
+
+    return jsonify(data)
 #################################################
 if __name__ == "__main__":
     app.run(debug=True)
