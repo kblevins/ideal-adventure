@@ -9,7 +9,7 @@ function speciesName(spCode){
 
 
 // initializing map
-speciesMap("paibun");
+speciesMap("paibun", 30);
 
 // insert species name into header
 speciesName("paibun");
@@ -18,10 +18,10 @@ speciesName("paibun");
 speciesMedia("paibun");
 
 // what to do when the state is changed
-function optionChanged(species){
+function optionChanged(species, days){
   console.log(species);
   speciesName(species);
-  speciesMap(species);
+  speciesMap(species, days);
   birdMedia(species);
   }
 
