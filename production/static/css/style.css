@@ -68,16 +68,17 @@ h2 {
 
 /* Footer Styling */
 .footer {
-    background-color: #af7d3286;
-    position: fixed;
+    background-color: #af7d3265 !important;
+    position: absolute;
+    right: 0;
     left: 0;
     bottom: 0;
     width: 100%;
-    color: #af7d32;
+    color: #640000;
     text-align: left;
-    border-bottom: 3px solid #af7d32;
-    border-top: 3px solid #af7d32;
-    font-family: 'Almendra Display', cursive !important;
+    border-bottom: 2px solid #af7d32;
+    border-top: 2px solid #af7d32;
+    font-family: 'Dosis', sans-serif !important;
 }
 
 .footer p {
@@ -92,7 +93,7 @@ h2 {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    background-size: auto 1200px;
+    background-size: auto 1500px;
 }
 
 
@@ -326,9 +327,6 @@ select i {
     margin-top: 25%;
 }
 
-.speciesMap #speciesChart  {
-    margin-top: 15%;
-}
 
 .fa-volume-up, fa-home {
     font-size: 100px;
@@ -348,18 +346,14 @@ select i {
     border-radius: 5px;
 }
 
-.speciesMap #speciesChart {
-    padding-right: 20px;
-}
 /* Styling for state page */
-
 .stateSelect {
     font-family: 'Dosis', sans-serif !important;
     margin-top: 50%;
 }
 
-.gallery .figure {
-    padding-bottom: 5px;
+.gallery {
+    padding-bottom: 10px;
 }
 
 /* Styling for regional page */
@@ -385,8 +379,6 @@ select i {
 
 /* Regional & State Page Footers */
 #STUPID {
-    background-color: #af7d3286;
-    border-top: 3px solid #af7d32;
     text-align: center;
 }
 
@@ -424,14 +416,16 @@ select i {
 }
 
 /* Styling for map */
-.state{
+.state {
     fill: none;
     stroke: #a9a9a9;
     stroke-width: 1;
 }
+
 .state:hover{
     fill-opacity:0.5;
 }
+
 #tooltip {   
     position: absolute;           
     text-align: center;
@@ -447,7 +441,7 @@ select i {
     margin:0;
     font-size:14px;
 }
-#tooltip{
+#tooltip {
     background:rgba(0,0,0,0.9);
     border:1px solid grey;
     border-radius:5px;
@@ -457,16 +451,20 @@ select i {
     color:white;
     opacity:0;
 }
+
 #tooltip table{
     table-layout:fixed;
 }
+
 #tooltip tr td{
     padding:0;
     margin:0;
 }
+
 #tooltip tr td:nth-child(1){
     width:50px;
 }
+
 #tooltip tr td:nth-child(2){
     text-align:center;
 }
@@ -479,4 +477,18 @@ select i {
     padding-top: 20%;
     padding-bottom: 20%;
     text-align: center;
+}
+
+/* Map Styling */
+#map {
+    width: 600px; 
+    height: 500px; 
+    margin: 5% auto;
+}
+
+/* Chart formatting */
+#sitesChart, #regionChart {
+    margin: 5% auto !important; 
+    height:500px; 
+    width: 600px;
 }
