@@ -9,8 +9,6 @@ function stateKeys(){
       // console.log(values[i][0]) 
     })
   }
-
-
 //var stateKeys = stKeys();
 
 // Populating dropdown with state names
