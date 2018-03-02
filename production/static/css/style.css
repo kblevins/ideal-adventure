@@ -93,7 +93,7 @@ h2 {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    background-size: auto 1500px;
+    background-size: 100%;
 }
 
 
