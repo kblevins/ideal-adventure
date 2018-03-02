@@ -14,6 +14,8 @@
     <!-- Leaflet -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+    <!-- Favicon -->
+    <link href="/static/images/favicon.ico" rel="icon" type="image/x-icon" />
     <!-- states center & zoom -->
     <script src="../static/data/state_centroids.js"></script>
     <script src="../static/data/region_centroids.js"></script>
@@ -42,21 +44,22 @@
         </div>    
     </div>
  
-    <div class="row">
-        <!-- State map inserted here -->
-        <div class="col-md-6">
-                <div id="stateMap"></div>
-        </div>
-        <div class="col-md-6">
-        <!-- Top 10 species chart inserted here -->
-            <div id="speciesChart">
+    <div class="page">
+        <div class="row">
+            <!-- State map inserted here -->
+            <div class="col-md-6">
+                <div class="map-container">
+                    <div id="stateMap"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+            <!-- Top 10 species chart inserted here -->
                 <div id = "sitesChart">
                         <script src="/static/js/stateJS.js"></script>
                 </div>
             </div>
         </div>
     </div>
-
     <div class="container-fluid imageGallery footer">
         <div class="row" id="STUPID">
             <!-- Images for top 5 species in the state go here -->

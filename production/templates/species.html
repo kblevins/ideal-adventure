@@ -26,7 +26,8 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
-    
+    <!-- Favicon -->
+    <link href="/static/images/favicon.ico" rel="icon" type="image/x-icon" />
     <!-- Include Date Range Picker -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
@@ -45,14 +46,16 @@
     
     <div class = "row">
         <div class="col-md-6">
-            <div id="speciesMap"></div>
+            <div class="map-container">
+                    <div id="speciesMap"></div>
+            </div>
         </div>
-        
+
         <div class="col-md-6">
-            <div class="row" style="margin-top: 10%;">
+            <div class="row" style="margin-top: 10%; padding-bottom: 10px;">
                 <div class="col-md-1"></div>
                 <div class="col-md-3">
-                    <input type="text" class="form-control" style="width: 100%; " placeholder="Search">
+                    <input type="text" class="form-control" style="width: 100%" placeholder="Search">
                 </div>   
                 <div class="col-md-7">
                     <div id="reportrange" class="pull-right" style="cursor: pointer; width: 100%">
@@ -63,9 +66,10 @@
             </div>  
 
             <div class="row">
-            
-                <a id = "bird-media"></a>
-                    <script src="/static/js/speciesJS.js"></script>
+                <div class="birdz">
+                    <a id = "bird-media"></a>
+                        <script src="/static/js/speciesJS.js"></script>
+                </div>        
             </div>
         </div>     
     </div>
