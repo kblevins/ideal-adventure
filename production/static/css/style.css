@@ -470,3 +470,13 @@ select i {
 #tooltip tr td:nth-child(2){
     text-align:center;
 }
+
+.legend{
+    background: rgba(56, 56, 56, 0.438);
+    color: white;
+    height: 150%;
+    width: 100%;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    text-align: center;
+}
