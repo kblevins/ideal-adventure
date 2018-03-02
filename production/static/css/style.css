@@ -3,6 +3,7 @@ body, {
   height: 100%;
   padding: 0;
   margin: 0;
+  padding-bottom: 200px;
 }
 
 body {
@@ -69,10 +70,11 @@ h2 {
 /* Footer Styling */
 .footer {
     background-color: #af7d3265 !important;
-    position: absolute;
+    position: relative;
     right: 0;
     left: 0;
     bottom: 0;
+    clear: both;
     width: 100%;
     color: #640000;
     text-align: left;
@@ -480,15 +482,26 @@ select i {
 }
 
 /* Map Styling */
+.map-container {
+    height: 650px;
+    padding-left: 10%;
+    padding-bottom: 20px;
+    position: relative;
+}
+
 #map {
-    width: 600px; 
+ 
     height: 500px; 
-    margin: 5% auto;
+    margin: 10% auto;
 }
 
 /* Chart formatting */
 #sitesChart, #regionChart {
-    margin: 5% auto !important; 
+    margin: 10% auto !important; 
     height:500px; 
-    width: 600px;
+    width: 700px;
+}
+
+.page {
+   min-height: 100%;
 }

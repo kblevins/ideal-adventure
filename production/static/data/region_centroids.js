@@ -9,7 +9,7 @@ var region_center =
     "Ozarks":{"region": "Ozarks", "states": ["Missouri", "Arkansas", "Louisiana", "Mississippi", "Alabama", "Tenesse"], "lat": 33.899503, "long": -90.150637, "zoom": 3},
     "Southeast":{"region": "Southeast", "states": ["Florida", "Georgia"], "lat": 30.573510, "long": -82.899660, "zoom": 4},
     "MidAtlantic":{"region": "Mid-Atlantic", "states": ["South Carolina", "North Carolina", "Virginia", "West Virginia", "Kentucky"], "lat": 36.714133, "long": -82.679934, "zoom": 4},
-    "PrairiePennisula":{"region": "Prairie Penninsula", "states": ["Iowa", "Illinois", "Indiana"], "lat": 40.856941, "long": -89.008059, "zoom": 4},
+    "PrairiePeninsula":{"region": "Prairie Penninsula", "states": ["Iowa", "Illinois", "Indiana"], "lat": 40.856941, "long": -89.008059, "zoom": 4},
     "GreatLakes":{"region": "Great Lakes", "states": ["Minesotta", "Wisconsin", "Michigan"], "lat": 45.929673, "long": -89.008059, "zoom": 4},
     "Northeast":{"region": "Northeast", "states": ["Pennsylvania", "Delaware", "New York", "New Jersey", "Conneticut", "Rhode Island", "Massachussets", "New Hamsphire", "Vermont", "Maine"], "lat": 42.708184, "long": -75.110354, "zoom": 3}
 };
