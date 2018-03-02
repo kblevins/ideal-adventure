@@ -1,10 +1,15 @@
-function stKeys(){
-  url = 'stateCentroid'
+function stateKeys(){
+  url = '/stateCentroid'
   Plotly.d3.json(url, function(error, data){
     if (error) return console.warn(error);
-    var st_keys = data.map(record => record[0]);
-  })
-}
+    // var st_keys = data.map(record => record.keys);
+    var stateKeys = Object.keys(data);
+    console.log(stateKeys)
+    // for (i=0; i< values; i++) {
+      // console.log(values[i][0]) 
+    })
+  }
+
 
 //var stateKeys = stKeys();
 
@@ -18,10 +23,11 @@ function stateDropDown(){
           stateOp.value= stateKeys[i];
           stateDrop.appendChild(stateOp);
       }
+  console.log("click")
     }
 
 function stateName(ST){
-  url = 'stateCentroid'
+  url = '/stateCentroid'
   Plotly.d3.json(url, function(error, data){
     if (error) return console.warn(error);
 
@@ -33,19 +39,20 @@ function stateName(ST){
 // stateName("AL");
 
 // create dropdown
+stateKeys();
 stateDropDown();
 
 // insert state name into header
-stateName("AL");
+stateName("TX");
 
 // initializing map
-stateMap("AL");
+stateMap("TX");
 
 // initializing chart
-siteChart("AL");
+siteChart("TX");
 
 // initialize bird photos
-birdPhotos("AL");
+birdPhotos("TX");
 
 // what to do when the state is changed
 function optionChanged(ST){
@@ -54,6 +61,7 @@ function optionChanged(ST){
   stateMap(ST);
   siteChart(ST);
   birdPhotos(ST);
+  console.log("click")
   }
 
 function siteChart(ST){
@@ -137,7 +145,7 @@ function regionDropDown(){
 
 function RegionName(Region){
   var rg_head = document.getElementById("regionName");
-  rg_head.innerHTML = Region
+  rg_head.innerHTML = region_center[Region].region;
 }
 
 

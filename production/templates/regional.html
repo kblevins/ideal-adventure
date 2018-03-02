@@ -16,11 +16,17 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
+    
+    <!-- javascript code -->
+    <script src="../static/data/state_centroids.js"></script>
+    <script src="../static/data/region_centroids.js"></script>
+    <!-- map js -->
+    <script type="text/javascript" src="../static/js/logic.js"></script>
     <!-- Include Date Range Picker -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
     <!-- Our CSS -->
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
 </head>
 <body>
     <!-- Header -->
@@ -32,8 +38,8 @@
             <div class="col-md-10"><h2 id="regionName"></h2></div>
             <div class="col-md-1">
                 <div class="regionSelect">
-                    <label for="stateDrop">Region:</label>
-                    <select id="stateDrop" onchange="optionChanged(this.value)" style="color: black; border-radius: 3px;">
+                    <label for="regionDrop">Region:</label>
+                    <select id="regionDrop" onchange="optionChanged(this.value)" style="color: black; border-radius: 3px;">
                     </select>
                 </div>
             </div>

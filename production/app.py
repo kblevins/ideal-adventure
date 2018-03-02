@@ -118,7 +118,7 @@ def regionData(Region):
 @app.route('/birdRegData/<Region>')
 def birdRegData(Region):
    regionData = getRegionData.getRegionData(Region)
-   birds = getRegionData.getRegBirds(regionData)
+   birds = getRegionData.getBirds(regionData)
    birdsj = eval(birds)
 
    results = session.query(Bird.Common_Name, Bird.Img_URL, Bird.Audio_URL, Bird.Info_URL)
