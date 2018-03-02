@@ -52,6 +52,10 @@ function siteChart(ST){
   var values = siteData.map(record => record.species_number);
   var sites = siteData.map(record => record.locName);
 
+    //color list:solid bird, lavender,  pink,     peach,      eggshell,  pumpkin,   tangerine, orange,    burnt,     sienna
+  var colors = ["#9e9ac8", "#b5afed", "#f6b2ff", "#ffc1df", "#ffebbc", "#ffc849", "#ff975b", "#ff830f", "#db6600", "#843c09"]
+
+
   var data = [
     {
       x: [1,2,3,4,5,6,7,8,9,10],
@@ -59,7 +63,7 @@ function siteChart(ST){
       type: 'bar',
       text: sites,
       marker: {
-        color: '#9e9ac8'
+        color: colors
       }
     }
   ];
