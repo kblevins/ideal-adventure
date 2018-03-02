@@ -171,9 +171,9 @@ def regionCentroid():
 
     return jsonify(data)
 
-@app.route('/speciesData/<species>')
-def speciesData(species):
-    speciesData = getSpeciesData.speciesData(species)
+@app.route('/speciesData/<species>/<days>')
+def speciesData(species, days):
+    speciesData = getSpeciesData.speciesData(species, days)
     
     return speciesData
 

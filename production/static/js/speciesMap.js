@@ -1,5 +1,5 @@
-function speciesMap(species){
-  url = 'speciesData/'+ species;
+function speciesMap(species, days){
+  url = 'speciesData/'+ species + "/" + days;
   Plotly.d3.json(url, function(error, data){
     if (error) return console.warn(error);
 

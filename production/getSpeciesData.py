@@ -6,10 +6,10 @@ import plotly.plotly
 
 #Function that takes a species code input and returns a json object of the number of the specified species that was observed in 
 #a location over the last 30 days. The JSON is in descending order of number of species seen.
-def speciesData(species):
+def speciesData(species, days):
     # use API to retrieve species data
     header = {"x-ebirdapitoken": "p54pcbn15ebh"}
-    species_url = "https://ebird.org/ws2.0/data/obs/US/recent/"+species+"/?back=30"
+    species_url = "https://ebird.org/ws2.0/data/obs/US/recent/"+species+"/?back="+days
     local_response = requests.get(species_url, headers=header)
     data = local_response.text
     
