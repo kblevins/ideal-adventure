@@ -212,6 +212,20 @@ h2 {
     margin-bottom: 0 !important;
 }
 
+/* Species search tab */
+.tabImg1, .iSearch, #searchEx {
+    padding-top: 8%;
+    padding-bottom: 5%;
+}
+
+.iSearch, .iSearch2, .iSearch3 {
+    font-size: 50px !important; 
+}
+
+.tabImg2, .regImg {
+    padding-top: 8%;
+}
+
 #selectNumber {
     margin-bottom: 5px !important;
 }

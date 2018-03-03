@@ -42,11 +42,11 @@
             </div>
             
             <div id="speciesHotSpots" class="tabcontent">
-                <div class="input-group" id="species">
-                    <input type="text" class="form-control" placeholder="Search">
+                <!-- <div class="input-group" id="species">
+                    <input id="userInput" type="text" class="form-control" placeholder="Search">
                     <span class="input-group-btn">
                         <a href="/species">
-                            <button class="btn btn-default" type="button"><i class="fas fa-search"></i></button>
+                            <button id="speciesSubmit" class="btn btn-default" type="button"><i class="fas fa-search"></i></button>
                         </a>
                     </span>
                 </div>
@@ -57,26 +57,32 @@
                         <span></span> <b class="caret"></b>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-2"></div> -->
+                <div class="col-md-6 tabImg1">
                     <img src="https://lh3.googleusercontent.com/3jHYinmjBtqYetiGnS5i4bPQCBQcef6G-iK8DhSPgccgz7Wv_gY53B13c0JCLlfXyE3dAUZc0ekW8JBG1XM42sGBHs8PjaMwFY8yGcnsHGAi7cjBGEd-p_7t02ymgS-sGSulX13ucw" alt="species" class="img-thumbnail">
                 </div>
-                <div class="col-md-6" id="searchEx">
-                    <p>Choose a species code from <a target="_blank" href="/birdDB">this</a> table and search for overall hot-spots</p>
+                <div class="col-md-6 specSearch" id="searchEx">
+                    <p>Choose a species code and search for overall hot-spots</p>
                 
-                    <p>Example: chotin1 will return a map of hot-spots for a Choco Tinamou</p>
-                </div>    
+                    <p>Example: paibun will return a map of hot-spots for a Painted Bunting</p>
+                </div>  
+                <div class="col-md-12">
+                    <a href="/species">
+                        <button id="speciesSubmit" class="btn btn-default" type="button"><i class="fas fa-search iSearch"></i></button>
+                    </a>
+                </div>  
             </div>
 
             <div id="stateHotSpots" class="tabcontent">
-                <div class="input-group" id="states">
+                <!-- <div class="input-group" id="states">
                     <input type="text" class="form-control" placeholder="Search">
                     <span class="input-group-btn">
                         <a href="/states">
                             <button class="btn btn-default" type="button"><i class="fas fa-search"></i></button>
                         </a>
                     </span>
-                </div>
-                <div class="col-md-6">
+                </div> -->
+                <!-- <div class="col-md-6">
                     <div class="row">
                         <div id="selectNumber">
                             <form id="myForm">
@@ -89,16 +95,30 @@
                     <div class="row">
                         <img src="https://lh3.googleusercontent.com/2yWI1q3cRgh03sW90qbefQ1qbmS956EeAauIME9bsuQ7FK0SatRgWYS-9rGgqZROe1u876uqNd0blKBSEFk3Gkwd9-CnmT6opexdxz3OudksCjNmHks5G7VDQyKIqNnwZAD4t5XOmw" alt="states" class="img-thumbnail">
                     </div>  
-                </div>   
+                </div>    -->
+                <div class="col-md-6 tabImg2">
+                    <div class="row">
+                        <img src="https://lh3.googleusercontent.com/2yWI1q3cRgh03sW90qbefQ1qbmS956EeAauIME9bsuQ7FK0SatRgWYS-9rGgqZROe1u876uqNd0blKBSEFk3Gkwd9-CnmT6opexdxz3OudksCjNmHks5G7VDQyKIqNnwZAD4t5XOmw" alt="states" class="img-thumbnail">
+                    </div> 
+                </div>
                 <div class="col-md-6" id="searchEx">
-                    <p>Select only a state to return the top 5 species hot-spots and top 10 hot-spot locations for that state</p>
-                
-                    <p>Select a state and <a target="_blank" href="">species</a> to search for specific species' hot-spots and locational hot-spots within that state</p>
-                </div>   
+                    <div class="row">
+                        <p>Select a state to return the top 10 hot-spot locations for that state</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <a href="/states">
+                                <button class="btn btn-default" type="button"><i class="fas fa-search iSearch2"></i></button>
+                            </a>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                </div>
             </div>
             
             <div id="regionalHotSpots" class="tabcontent">
-                <div class="input-group" id="regional">
+                <!-- <div class="input-group" id="regional">
                     <input type="text" class="form-control" placeholder="Search">
                     <span class="input-group-btn">
                         <a href="/regional">
@@ -128,10 +148,30 @@
                     <p>Select a region and species to search for specific species' hot-spots and locational hot-spots within that region</p>
                    
                     <p>Click the map to see a regional breakdown</p>
+                </div> -->
+                <div class="col-md-8 regImg">
+                    <a target="_blank"href="https://lh3.googleusercontent.com/kRuMIRdbj1NFaIzUFtn9Lyc_PPzoTPxvm-mf4Rka4NQmWs5rg2oHyITat2bp8l7g2LjdxDnAqfxXjxhMR_P7rc5G8K29DUW-YwyEgFtfECQOQ_X0FOtOLVGr11r1HJbWSmbiksDKTA">
+                        <img src="https://lh3.googleusercontent.com/jylH5vdtTRBAYvPgECKlYv4atO1BaQrJAm8xlAw851uNWjDFV7J3CP5i5Y65Ye1rv4Won42MOCdzGuKm96iR4vCvxJnV8vxE9YrYIwEArtBqd7ZKQXVbq_oZ3ExQwPfRR_VlMQAWuQ" alt="regions" class="img-thumbnail">
+                    </a>
+                </div>
+                <div class="col-md-4" id="searchEx">
+                    <div class="row">
+                        <p>Select a region to search for the top 10 location hot-spots</p>
+                        
+                        <p>Click the map to see a regional breakdown</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-9">
+                            <a href="/regional">
+                                <button class="btn btn-default" type="button"><i class="fas fa-search iSearch3"></i></button>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             
-            <div id="speciesDistr" class="tabcontent">
+            <!-- <div id="speciesDistr" class="tabcontent">
                     <div class="input-group" id="time">
                         <input type="text" class="form-control" placeholder="Search">
                         <span class="input-group-btn">
@@ -147,7 +187,7 @@
                             <span></span> <b class="caret"></b>
                         </div>
                     </div>
-                    <div class="col-md-1"></div>
+                    <div class="col-md-1"></div> -->
                 <!-- <div class="col-md-7">
                     <img src="https://lh3.googleusercontent.com/gtTL-gw0auQ5GqJFsdmvaoBA_lpebABFY8eWDgQIEmzSiWyTbludVF5V0YVsBK4vlodfCwQK0lKZZPhqJnQK6X3Y1uehByI_S-_hDNCw-7Q3JLmv1hYIDw93ar8FEQMFPjZTx553xw" alt="regions" class="img-thumbnail">
                     <br><p class="label">Common Yellowthroat | eBird</p>
@@ -158,8 +198,7 @@
                     </div>
                 </div> -->
             </div> 
-        </div>
-        <div class="col-md-2"></div>   
+        </div>  
     </div>
     <div class="container-fluid">
         <div class="col-md-2"></div>
@@ -194,71 +233,71 @@
     document.getElementsByClassName('tablinks')[0].click()
 
     // Adding a dropdown to search for species by state
-    var selectState = document.getElementById("selectState");
+    // var selectState = document.getElementById("selectState");
 
-    var states = 	/* states to populate the dropdown */	
-        ["HI", "AK", "FL", "SC", "GA", "AL", "NC", "TN", "RI", "CT", "MA",
-        "ME", "NH", "VT", "NY", "NJ", "PA", "DE", "MD", "WV", "KY", "OH", 
-        "MI", "WY", "MT", "ID", "WA", "DC", "TX", "CA", "AZ", "NV", "UT", 
-        "CO", "NM", "OR", "ND", "SD", "NE", "IA", "MS", "IN", "IL", "MN", 
-        "WI", "MO", "AR", "OK", "KS", "LA", "VA"]
-    states.sort(); /* placing the states in alphabetical order */
+    // var states = 	/* states to populate the dropdown */	
+    //     ["HI", "AK", "FL", "SC", "GA", "AL", "NC", "TN", "RI", "CT", "MA",
+    //     "ME", "NH", "VT", "NY", "NJ", "PA", "DE", "MD", "WV", "KY", "OH", 
+    //     "MI", "WY", "MT", "ID", "WA", "DC", "TX", "CA", "AZ", "NV", "UT", 
+    //     "CO", "NM", "OR", "ND", "SD", "NE", "IA", "MS", "IN", "IL", "MN", 
+    //     "WI", "MO", "AR", "OK", "KS", "LA", "VA"]
+    // states.sort(); /* placing the states in alphabetical order */
 
-    // loop through the array to populate the dropdown list
-    for(var i = 0; i < states.length; i++) {
-        var optS = states[i];
-        var elS = document.createElement("option");
-        elS.textContent = optS;
-        elS.value = optS;
-        selectState.appendChild(elS);
-    }
+    // // loop through the array to populate the dropdown list
+    // for(var i = 0; i < states.length; i++) {
+    //     var optS = states[i];
+    //     var elS = document.createElement("option");
+    //     elS.textContent = optS;
+    //     elS.value = optS;
+    //     selectState.appendChild(elS);
+    // }
 
     // Creating a dropdown for regional search
-    var selectRegion = document.getElementById("selectRegion");
+    // var selectRegion = document.getElementById("selectRegion");
 
-    var regions = /* regions to populate the dropdown */
-        ["Pacific Northwest", "Pacific Southwest/Great Basin", "Northern Plains",
-        "Southern Rockies/Colorado Plateau", "Central Plains", "Southern Plains",
-        "Great Lakes", "Prairie Peninsula", "Ozarks", "Northeast", "Mid-Atlantic/Appalachians",
-        "Southeast"]
-    regions.sort(); /* placing the regions in alphabetical order */
+    // var regions = /* regions to populate the dropdown */
+    //     ["Pacific Northwest", "Pacific Southwest/Great Basin", "Northern Plains",
+    //     "Southern Rockies/Colorado Plateau", "Central Plains", "Southern Plains",
+    //     "Great Lakes", "Prairie Peninsula", "Ozarks", "Northeast", "Mid-Atlantic/Appalachians",
+    //     "Southeast"]
+    // regions.sort(); /* placing the regions in alphabetical order */
     
-    // loop through regions array to populate the dropdown list
-    for(var i = 0; i < regions.length; i++) {
-        var optR = regions[i];
-        var elR = document.createElement("option");
-        elR.textContent = optR;
-        elR.value = optR;
-        selectRegion.appendChild(elR);
-    }
+    // // loop through regions array to populate the dropdown list
+    // for(var i = 0; i < regions.length; i++) {
+    //     var optR = regions[i];
+    //     var elR = document.createElement("option");
+    //     elR.textContent = optR;
+    //     elR.value = optR;
+    //     selectRegion.appendChild(elR);
+    // }
     
     // Datepicker
-    $(function() {
+    // $(function() {
 
-    var start = moment().subtract(29, 'days');
-    var end = moment();
+    // var start = moment().subtract(29, 'days');
+    // var end = moment();
 
-    function cb(start, end) {
-        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
-    }
+    // function cb(start, end) {
+    //     $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+    // }
 
-    $('#reportrange').daterangepicker({
-        'linkedCalendars': false,
-        startDate: start,
-        endDate: end,
-        ranges: {
-        'Today': [moment(), moment()],
-        'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-        'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-        'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-        'This Month': [moment().startOf('month'), moment().endOf('month')],
-        'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-        }
-    }, cb);
+    // $('#reportrange').daterangepicker({
+    //     'linkedCalendars': false,
+    //     startDate: start,
+    //     endDate: end,
+    //     ranges: {
+    //     'Today': [moment(), moment()],
+    //     'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+    //     'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+    //     'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+    //     'This Month': [moment().startOf('month'), moment().endOf('month')],
+    //     'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+    //     }
+    // }, cb);
 
-    cb(start, end);
+    // cb(start, end);
 
-    });
+    // });
 
     // Moment JS Fun
 
