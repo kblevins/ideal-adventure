@@ -16,7 +16,7 @@ def getRegionData(Region):
         "PacificSouthwest": ["CA", "NV"],
         "SouthernRockies": ["UT", "CO", "AZ", "NM"],
         "CentralPlains": ["NE", "KS", "OK"],
-        "SoutherPlains": ["TX"],
+        "SouthernPlains": ["TX"],
         "Ozarks": ["MO", "AR", "LA", "MS", "AL", "TN"],
         "Southeast": ["FL", "GA"],
         "MidAtlantic": ["SC", "NC", "VA", "WV", "KY"],
