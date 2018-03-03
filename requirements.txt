@@ -1,5 +1,4 @@
 beautifulsoup4==4.6.0
-conda==4.3.31
 Flask==0.12.2
 Flask-Cors==3.0.3
 gunicorn==19.7.1
