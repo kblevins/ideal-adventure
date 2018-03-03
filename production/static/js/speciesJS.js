@@ -10,19 +10,26 @@ function speciesName(spCode){
 
 // initializing map
 speciesMap("paibun", 30);
-
 // insert species name into header
 speciesName("paibun");
-
 // initialize bird photos
 speciesMedia("paibun");
 
+var $submitBtn = document.getElementById("submit");
+$submitBtn.addEventListener("click", function(){searchChanged()});
+
 // what to do when the state is changed
-function optionChanged(species, days){
-  console.log(species);
-  speciesName(species);
-  speciesMap(species, days);
-  birdMedia(species);
+function searchChanged(){
+
+  var $date = document.getElementById("calendar");
+  var $birdSearch = document.getElementById("birdSearch");
+
+  daysSearch = 30;
+  var spSearch = $birdSearch.value;
+
+  speciesName(spSearch);
+  speciesMap(spSearch, daysSearch);
+  speciesMedia(spSearch);
   }
 
 function speciesMedia(spCode){
