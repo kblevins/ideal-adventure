@@ -1,6 +1,6 @@
 var region_center = 
 {
-    "PacificNorthwest":{"region": "Pacific Northwest", "states": ["Washington, Oregon"], "lat": 45.749471, "long": -120.614503, "zoom": 4},
+    "PacificNorthwest":{"region": "Pacific Northwest", "states": ["Washington, Oregon"], "lat": 45.749471, "long": -120.614503, "zoom": 5},
     "NorthernPlains":{"region": "Northern Plains", "states": ["Idaho", "Montana", "Wyoming", "North Dakota", "South Dakota"], "lat": 44.977582, "long":-107.958253, "zoom": 4},
     "PacificSouthwest":{"region": "Pacific Southwest", "states": ["California", "Nevada"], "lat": 38.935396, "long": -120.022463, "zoom": 4},
     "CentralPlains":{"region": "Central Plains", "states": ["Nebraska", "Kansas", "Oklahoma"], "lat": 38.935395, "long": -98.555178, "zoom": 4},
