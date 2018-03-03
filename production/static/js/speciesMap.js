@@ -16,7 +16,23 @@ function speciesMap(species, days){
     var maxCount = Math.max(...birdCounts);
     var bins = Math.round(maxCount/3);
     
-    var color_list = ['#bcbddc','#9e9ac8','#756bb1']
+    function markerSize(num, max){
+      var numUp = num*3;
+      if(max < 15){
+        return(numUp)
+      } else if(max < 150){
+        return(numUp/10)
+      } else if(max < 1500){
+        return(numUp/100)
+      } else if(max < 15000){
+        return(numUp/1000)
+      } else if(max < 150000){
+        return(numUp/10000)
+      }
+    }
+    
+
+    var color_list = ['#f16913','#d94801','#8c2d04']
     for (var i = 0; i < data.length; i++) {
       var feature = data[i];
       var birdCount = feature.howMany;
@@ -33,7 +49,7 @@ function speciesMap(species, days){
         fillOpacity: .5,
         color: col,
         fillColor: col,
-        radius: feature.howMany
+        radius: markerSize(feature.howMany, maxCount)
       })
         .bindPopup("<table><tbody><tr><th align='right'>Location: </th> <td align='right'>" + feature.locName + 
         "</td></tr><tr><th align='right'>Individuals reported: </th><td align='right'>" + feature.howMany + "</td></tbody></table>")

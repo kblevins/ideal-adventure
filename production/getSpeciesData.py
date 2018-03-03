@@ -19,9 +19,11 @@ def speciesData(species, days):
     data = eval(data)
     df = pd.DataFrame(data)
     group_df = pd.DataFrame(df.groupby(['locName', 'lat', 'lng'])['howMany'].sum())
+    group_df = group_df.dropna()
     group_df =group_df.sort_values(by = ['howMany'], ascending = False)
     group_df = group_df.reset_index(level =['lat','lng', 'locName'])
-    
+    if group_df.shape[0]:
+        group_df = group_df.head(100)
     #Convert to Json in order to use in javascript Plotly
     species_json = group_df.to_json(orient='records', force_ascii=False)
     return(species_json)
