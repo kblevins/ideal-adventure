@@ -47,10 +47,10 @@ function speciesMedia(spCode){
 
   document.getElementById('bird-media').innerHTML = "<div id=bird-media></div>";
   var feature = document.getElementById('bird-media')
-    /*if(link !== "no link"){
+    if(link !== "no link"){
       feature.href = link;
     }
-    */
+    
     var birdImg = document.createElement("img");
     birdImg.setAttribute("style", "height: 70%; width: 70%;");
     if(image === "no img"){
