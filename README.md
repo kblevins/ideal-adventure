@@ -30,12 +30,12 @@ Data for the Birding Oracle come from <a href="https://ebird.org/home">ebird</a>
 
 The dashboard is an html webpage powered by JavaScript, Python & SQLite.
 
-#####Javascript libraries
+**Javascript libraries**
 
 - Leaflet
 - Plotly
 
-##### Python modules
+**Python modules**
 
 - pandas
 - flask
