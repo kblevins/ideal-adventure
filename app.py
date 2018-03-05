@@ -2,6 +2,7 @@
 # import necessary libraries
 #################################################
 import pandas as pd
+import os
 import json
 import requests
 import plotly.plotly
@@ -26,6 +27,9 @@ pymysql.install_as_MySQLdb()
 
 from sqlalchemy import and_, or_
 from sqlalchemy import func
+
+# get tokens
+api_key = os.getenv('api_key')
 
 # Create an engine connecting to the SQLite database file
 engine = create_engine("sqlite:///birds.sqlite")
