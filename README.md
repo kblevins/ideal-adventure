@@ -1,45 +1,48 @@
-# Bird Oracle
+# Birding Oracle
+
+![bird oracle](images/landing-page.png)
+
+
 
 Check it out <a href="https://bird-oracle.herokuapp.com/">here!</a>
 
-**General Idea**
-
-Pull in data from ebird API & web scrape for bird images& audio clip of bird song, then create maps & charts to inform on bestplaces to look for birds
 
 
+*Where is the best place to look for painted buntings?*
 
-**Final product**
+*When should I put out my hummingbird feeders?*
 
-Web site with pages for searching by individual bird speciesor by overall bird diversity 
+*Where is the best place to go birding in my state?*
 
 
 
-**Data source**
-
-ebird.com
+These are the type of questions you can expect to have answered by the Birding Oracle. 
 
 
 
-**Track**
+## The Data
 
-A combination of Web Scraping and Leaflet or Plotly
-
-
-
-**New JS library**
-
-React
+Data for the Birding Oracle come from <a href="https://ebird.org/home">ebird</a>, a citizen-science driven data collection project. This dataset consists of millions of records of bird sightings submitted from all over the world.
 
 
 
-**Visualizations**
+## The Code
 
-1.     Interactive map that visualizes hot spotsfor a given species
+The dashboard is an html webpage powered by JavaScript, Python & SQLite.
 
-2.     Interactive map that visualizes hot spotsfor a given region
+#####Javascript libraries
 
-3.     Time-lapse map showing sightings overseasons
+- Leaflet
+- Plotly
 
-4.     Bar chart showing top 10 locations to viewa species
+##### Python modules
 
-5.     Bar chart showing top 10 locations to viewthe most diversity of species
+- pandas
+- flask
+- sqlalchemy
+
+
+
+Now go find some birds!
+
+![painted bunting](images/ibis.jpeg)
