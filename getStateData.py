@@ -2,6 +2,7 @@
 import pandas as pd
 import requests
 import plotly.plotly
+import os
 
 ## function to fetch 30 days worth of data for a state, 
 ## subset by the top 10 sites with the most # of species
@@ -13,7 +14,8 @@ def getStateData(state):
     # Part 1 - Get data
     # set url, token, & request data
     url = f"https://ebird.org/ws2.0/data/obs/US-{state}/recent/?back=30"
-    headers = {'X-eBirdApiToken': 'oos4bb9k3art'}
+    ebird_token = os.getenv('ebird_token')
+    headers = {'X-eBirdApiToken': ebird_token}
     response = requests.request("GET", url, headers=headers)
 
     # Part 2 - Get top 10 locations
