@@ -7,12 +7,13 @@ function RegionMap(Region){
     
 
     document.getElementById('regionMap').innerHTML = "<div id='map'></div>";
-    var osmUrl = "https://api.mapbox.com/styles/v1/kkblevins/cje0f0el638792rmw5y3yw648/tiles/256/{z}/{x}/{y}?"+
-    "access_token=pk.eyJ1Ijoia2tibGV2aW5zIiwiYSI6ImNqZGhqeWlxaDBiZ2kydnNhYTlseDE3eTYifQ.EWlCoyNVcod37iJ0nUdG3w"
-    osmLayer = new L.TileLayer(osmUrl);
+    var OpenStreetMap_DE = L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    });
     var map = new L.Map('map');
     map.setView(new L.LatLng(RegionData.lat, RegionData.long), RegionData.zoom);
-    map.addLayer(osmLayer);
+    map.addLayer(OpenStreetMap_DE);
 
     var colors = ['solid bird', 'lavender', 'pink', 'peach', 'eggshell', 'pumpkin', 'tangerine', 'orange', 'burnt', 'sienna']
     
