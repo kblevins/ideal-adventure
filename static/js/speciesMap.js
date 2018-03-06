@@ -5,12 +5,14 @@ function speciesMap(species, days){
 
     document.getElementById('speciesMap').innerHTML = 
     "<div id='map' ></div>";
-    var osmUrl = "https://api.mapbox.com/styles/v1/kkblevins/cje0f0el638792rmw5y3yw648/tiles/256/{z}/{x}/{y}?"+
-    "access_token=pk.eyJ1Ijoia2tibGV2aW5zIiwiYSI6ImNqZGhqeWlxaDBiZ2kydnNhYTlseDE3eTYifQ.EWlCoyNVcod37iJ0nUdG3w"
-    osmLayer = new L.TileLayer(osmUrl);
+    var OpenStreetMap_DE = L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', 
+    {
+      maxZoom: 18,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    });
     var map = new L.Map('map');
     map.setView(new L.LatLng(39.828175, -98.579500), 4);
-    map.addLayer(osmLayer);
+    map.addLayer(OpenStreetMap_DE);
 
     var birdCounts = data.map(record => record.howMany);
     var maxCount = Math.max(...birdCounts);
