@@ -1,8 +1,8 @@
-## import dependencies
 import pandas as pd
 import requests
 import plotly.plotly
-
+import os
+import json
 ## function to fetch 30 days worth of data for a state, 
 ## subset by the top 10 sites with the most # of species
 ## return json object with location name, lat longs, & # 
@@ -24,7 +24,8 @@ def getRegionData(Region):
         "GreatLakes": ["MN", "WI", "MI"],
         "Northeast": ["PA", "NY", "NJ", "CT", "RI", "MA", "NH", "VT", "ME"]
     }
-    headers = {'X-eBirdApiToken': 'p54pcbn15ebh'}
+    ebird_token = os.getenv('ebird_token')
+    headers = {'X-eBirdApiToken': ebird_token}
     
     target = regDict[Region]
         
@@ -39,10 +40,7 @@ def getRegionData(Region):
 
     totallist = []
     for idx,item in enumerate(response_list):
-        item = item.replace('true', 'True')
-        item = item.replace('false', 'False')
-        item = eval(item)
-        #print(item)
+        item = json.loads(item)
         for resp_dict in item:
             totallist.append(resp_dict)       
     df = pd.DataFrame(totallist)
