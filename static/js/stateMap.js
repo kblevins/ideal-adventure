@@ -5,14 +5,14 @@ function stateMap(ST){
     if (error) return console.warn(error);
 
     document.getElementById('stateMap').innerHTML = "<div id='map'></div>";
-    var OpenStreetMap_DE = L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', 
+    var OpenStreetMap = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', 
     {
       maxZoom: 18,
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     });
     var map = new L.Map('map');
     map.setView(new L.LatLng(stateData.center_lat, stateData.center_lng), stateData.zoom );
-    map.addLayer(OpenStreetMap_DE);
+    map.addLayer(OpenStreetMap);
 
     var colors = ['solid bird', 'lavender', 'pink', 'peach', 'eggshell', 'pumpkin', 'tangerine', 'orange', 'burnt', 'sienna']
     
