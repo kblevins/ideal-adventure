@@ -30,7 +30,8 @@ function stateMap(ST){
       var feature = data[i];
       
       L.marker([feature.lat, feature.lng], {icon: birdIcon})
-        .bindPopup("<h3>" + feature.locName + "</h3><ul><p>" + feature.species_number + " birds</p></ul>")
+        .bindPopup("<table><tbody><tr><th align='right'>Location: </th> <td align='right'>" + feature.locName + 
+        "</td></tr><tr><th align='right'>Species reported: </th><td align='right'>" + feature.species_number + "</td></tbody></table>")
         .addTo(map);
         
     }
