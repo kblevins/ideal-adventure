@@ -365,8 +365,17 @@ select i {
     margin-top: 50%;
 }
 
-.gallery {
-    padding-bottom: 10px;
+#stateMap, #regionMap {
+    padding: 10px;
+    background: #eee6d8; /*fallback colour for browsers that don't support gradients*/
+    background: -webkit-linear-gradient(top, #ede1c9, #fef8e2 20%, #f2ebde 60%);
+    background: -moz-linear-gradient(top, #ede1c9, #fef8e2 20%, #f2ebde 60%);
+    background: -o-linear-gradient(top, #ede1c9, #fef8e2 20%, #f2ebde 60%);
+    background: -ms-linear-gradient(top, #ede1c9, #fef8e2 20%, #f2ebde 60%);
+    background: linear-gradient(top, #ede1c9, #fef8e2 20%, #f2ebde 60%);
+    -webkit-box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, .75);
+    -moz-box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, .75);
+    box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, .75);
 }
 
 /* Styling for regional page */
@@ -380,9 +389,106 @@ select i {
     /* padding: 10px; */
 }
 
-/* Image captions */
-.regionMap .caption {
-    padding-bottom: 10px;
+/* Polaroids */
+figure, figcaption { /*add any other html5 elements you use*/
+    display:block;
+    }
+
+#polaroid {
+    margin-top: 10px;
+    padding:20px 10px;
+    /*setting a width and adding overflow:hidden will clear the floats we're going to apply to figure*/
+    width:100%;
+    overflow:hidden;
+    }
+
+#polaroid figure {
+    float:left; /*places the images in a horizontal line*/
+    position:relative; /*allows precise positioning of the tape in step 5- see support section below for more info*/
+    width: 220px; /*width of the images*/
+    margin: 10px 20px; /*space between the images*/
+    padding: 3px 3px 10px 3px; /*size of the frame*/
+    /*give the frame's background colour a gradient*/
+    background: #eee6d8; /*fallback colour for browsers that don't support gradients*/
+    background: -webkit-linear-gradient(top, #ede1c9, #fef8e2 20%, #f2ebde 60%);
+    background: -moz-linear-gradient(top, #ede1c9, #fef8e2 20%, #f2ebde 60%);
+    background: -o-linear-gradient(top, #ede1c9, #fef8e2 20%, #f2ebde 60%);
+    background: -ms-linear-gradient(top, #ede1c9, #fef8e2 20%, #f2ebde 60%);
+    background: linear-gradient(top, #ede1c9, #fef8e2 20%, #f2ebde 60%);
+    /*give the Polaroids a small drop shadow*/
+    -webkit-box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, .75);
+    -moz-box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, .75);
+    box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, .75);
+    }
+
+/***Rotate the images 1 degrees anti-clockwise***/
+#polaroid figure{
+    -webkit-transform:rotate(-1deg);
+    -moz-transform: rotate(-1deg);
+    -o-transform: rotate(-1deg);
+    -ms-transform: rotate(-1deg);
+    transform: rotate(-1deg);
+    -webkit-backface-visibility:hidden; /*prevent rotated text in the caption being jagged in Chrome and Safari*/
+    }
+    /***Rotate each even numbered image 2 degrees clockwise***/
+#polaroid figure:nth-child(even) { /*see support section below for more info on nth-child*/
+    -webkit-transform:rotate(2deg);
+    -moz-transform: rotate(2deg);
+    -o-transform: rotate(2deg);
+    -ms-transform: rotate(2deg);
+    transform: rotate(2deg);
+    /*because the image is rotated the opposite way, the drop-shadow needs moving to the other side of the image*/
+    -webkit-box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, .75);
+    -moz-box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, .75);
+    box-shadow: -4px 4px 8px -4px rgba(0, 0, 0, .75);
+    }
+
+#polaroid figcaption {
+    padding-top: 5px;
+    text-align: center;
+    font-family: 'Shadows Into Light Two', cursive;
+    font-size:1.3em;
+    color: #454f40;
+    letter-spacing: 0.09em;
+}
+
+#polaroid p {
+    font-family: 'Shadows Into Light Two', cursive;
+    font-size:1.3em;
+    color: #454f40;
+    /* letter-spacing: 0.09em; */
+    padding-top: 5px;
+}
+
+figure:before { /*see the support section below to more info on using the :before psuedo element*/
+    content: '';
+    display: block;
+    position: absolute;
+    left:5px; /*postion from the left side of the frame (positive value move the tape right, negative moves it left)*/
+    top: -15px; /*position from the top of the frame (positive move it above the frame, negative below)*/
+    width: 75px; /*width of the tape*/
+    height: 25px; /*height of the tape*/
+    background-color: rgba(222,220,198,0.7); /*colour of the tape, use rgba to make it slightly transparent*/
+    /*rotate the tape 12 degrees anti-clockwise*/
+    -webkit-transform: rotate(-12deg);
+    -moz-transform: rotate(-12deg);
+    -o-transform: rotate(-12deg);
+    -ms-transform: rotate(-12deg);
+    }
+    /**The tape for the even numbered images needs to be rotated the opposite way, as the images are, and positioned on the other side of the frame, I've also changed the width slightly**/
+figure:nth-child(even):before {
+    left:150px;
+    top: -15px;
+    width: 55px;
+    height: 25px;
+    -webkit-transform: rotate(12deg);
+    -moz-transform: rotate(12deg);
+    -o-transform: rotate(12deg);
+    -ms-transform: rotate(12deg);
+    }
+
+#polaroid img {
+    width: 200px; 
 }
 
 /* Home button */
@@ -391,38 +497,6 @@ select i {
 }
 
 /* Regional & State Page Footers */
-#STUPID {
-    text-align: center;
-}
-
-/* #STUPID a {
-    background: whitesmoke;
-    margin: 0 15px 30px;
-    padding: 10px 10px 25px;
-    box-shadow: 0 4px 6px rgba(0,0,0,.3);
-    transition: all .15s linear;
-    z-index:0;
-    position: relative;
-}
-
-#STUPID a:after {
-    color: whitesmoke;
-    font-size: 20px;
-    content: attr(title);
-    position: relative;
-    top: 15px; */
-/* } */
-
-/* Top 5 bird images */
-#STUPID img {
-    max-width: 150px;
-    border: none !important;
-    filter: sepia(100%);
-}
-
-#STUPID img:hover {
-    filter: none;
-}
 
 
 /* END REGIONAL & STATE FOOTERS */
@@ -514,19 +588,19 @@ select i {
 .map-container {
     height: 650px;
     padding-left: 10%;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
     position: relative;
 }
 
 #map {
  
     height: 500px; 
-    margin: 10% auto;
+    margin: 0;
 }
 
 /* Chart formatting */
 #sitesChart, #regionChart {
-    margin: 10% auto !important; 
+    margin: 0; 
     height:500px; 
     width: 700px;
 }
