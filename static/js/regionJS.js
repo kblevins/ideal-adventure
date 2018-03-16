@@ -96,7 +96,7 @@ function birdPhotos(region){
     
     var birdImg = document.createElement("img");
     if(images[i] === "no img"){
-      birdImg.src = "../static/images/solid bird.png"
+      birdImg.src = "../static/images/no-bird.png"
     } else {
       birdImg.src = images[i];
     }
